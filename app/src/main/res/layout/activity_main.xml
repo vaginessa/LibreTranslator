@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5">
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="75dp"
+                android:layout_marginRight="75dp"
+                android:background="@drawable/right_bottom_round"
+                android:contentDescription="@string/about"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="25dp"
+                android:text="@string/app_name"
+                android:textColor="?colorPrimary"
+                android:textSize="25sp"
+                app:drawableEndCompat="@android:drawable/ic_menu_info_details"
+                app:drawableRightCompat="@android:drawable/ic_menu_info_details"
+                app:drawableTint="?attr/colorPrimary" />
+
+            <Button
+                android:id="@+id/themeSwitcher"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="21dp"
+                android:background="@drawable/theme_round_button"
+                android:contentDescription="@string/switch_theme" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/MidView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/SourceLanguageTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_toStartOf="@id/RemoveSourceText"
+                    android:layout_toLeftOf="@id/RemoveSourceText"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/RemoveSourceText"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="20dp"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/removeText"
+                    android:src="@drawable/close"
+                    app:tint="?attr/frontColor" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/SourceText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints="text"
+                android:background="#00FFFFFF"
+                android:gravity="top"
+                android:hint="@string/typeToTranslate"
+                android:inputType="textMultiLine"
+                android:textColor="?frontColor"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BottomView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/left_top_round_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/TargetLanguageTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_toStartOf="@id/CopyTranslation"
+                    android:layout_toLeftOf="@id/CopyTranslation"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/CopyTranslation"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="20dp"
+                    android:layout_toStartOf="@+id/ShareTranslation"
+                    android:layout_toLeftOf="@+id/ShareTranslation"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/copy"
+                    android:src="@drawable/copy"
+                    app:tint="?attr/frontColor" />
+
+                <ImageButton
+                    android:id="@+id/ShareTranslation"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/share"
+                    android:src="@drawable/share"
+                    app:tint="?attr/frontColor" />
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/TranslatedTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textIsSelectable="true"
+                    android:textSize="22sp" />
+
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorPrimary"
+        android:orientation="horizontal"
+        android:paddingHorizontal="25dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/SourceLanguageBot"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/left_round"
+            android:contentDescription="@string/chooseSLanguage"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="?colorPrimary"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/TargetLanguageBot"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/right_round"
+            android:contentDescription="@string/chooseTLanguage"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="?colorPrimary"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/SwitchLanguages"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/round_button"
+        android:contentDescription="@string/switchLanguages"
+        android:elevation="3dp"
+        android:src="?attr/loopArrow"
+        tools:targetApi="lollipop" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

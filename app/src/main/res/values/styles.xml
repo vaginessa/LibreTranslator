@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVariantLight</item>
+        <item name="colorSecondary">@color/colorSecondaryLight</item>
+        <item name="colorAccent">@color/colorSecondaryLight</item>
+        <item name="android:textColor">@color/frontColorLight</item>
+        <item name="android:textColorHint">@color/hintColorLight</item>
+        <item name="frontColor">@color/frontColorLight</item>
+        <item name="loopArrow">@drawable/loop_arrow_light</item>
+
+        <item name="AlertBackground">@color/colorPrimaryLight</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVariantDark</item>
+        <item name="colorSecondary">@color/colorSecondaryDark</item>
+        <item name="colorAccent">@color/colorSecondaryDark</item>
+        <item name="android:textColor">@color/frontColorDark</item>
+        <item name="android:textColorHint">@color/hintColorDark</item>
+        <item name="frontColor">@color/frontColorDark</item>
+        <item name="loopArrow">@drawable/loop_arrow_dark</item>
+
+        <item name="AlertBackground">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="LilaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryLila</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVariantLila</item>
+        <item name="colorSecondary">@color/colorSecondaryLila</item>
+        <item name="colorAccent">@color/colorSecondaryLila</item>
+        <item name="android:textColor">@color/frontColorLila</item>
+        <item name="android:textColorHint">@color/hintColorLila</item>
+        <item name="frontColor">@color/frontColorLila</item>
+        <item name="loopArrow">@drawable/loop_arrow_lila</item>
+
+        <item name="AlertBackground">@color/colorPrimaryLila</item>
+    </style>
+
+    <style name="SandTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimarySand</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVariantSand</item>
+        <item name="colorSecondary">@color/colorSecondarySand</item>
+        <item name="colorAccent">@color/colorSecondarySand</item>
+        <item name="android:textColor">@color/frontColorSand</item>
+        <item name="android:textColorHint">@color/hintColorSand</item>
+        <item name="frontColor">@color/frontColorSand</item>
+        <item name="loopArrow">@drawable/loop_arrow_sand</item>
+
+        <item name="AlertBackground">@color/colorPrimarySand</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVariantBlue</item>
+        <item name="colorSecondary">@color/colorSecondaryBlue</item>
+        <item name="colorAccent">@color/colorSecondaryBlue</item>
+        <item name="android:textColor">@color/frontColorBlue</item>
+        <item name="android:textColorHint">@color/hintColorBlue</item>
+        <item name="frontColor">@color/frontColorBlue</item>
+        <item name="loopArrow">@drawable/loop_arrow_blue</item>
+
+        <item name="AlertBackground">@color/colorPrimaryBlue</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">?attr/AlertBackground</item>
+        <item name="android:textColor">?attr/frontColor</item>
+        <item name="android:textColorAlertDialogListItem">?attr/frontColor</item>
+    </style>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme -->
+    <color name="colorPrimaryLight">#f0f0f0</color>
+    <color name="colorPrimaryVariantLight">#BFBABA</color>
+    <color name="colorSecondaryLight">#606060</color>
+    <color name="frontColorLight">#000000</color>
+    <color name="hintColorLight">#514F4F</color>
+
+    <!-- Dark Theme -->
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryVariantDark">#262626</color>
+    <color name="colorSecondaryDark">#018786</color>
+    <color name="frontColorDark">#FFFFFF</color>
+    <color name="hintColorDark">#B1ACAC</color>
+
+    <!-- Lila Theme -->
+    <color name="colorPrimaryLila">#5A0A6E</color>
+    <color name="colorPrimaryVariantLila">#752A87</color>
+    <color name="colorSecondaryLila">#E377FF</color>
+    <color name="frontColorLila">#FFFFFF</color>
+    <color name="hintColorLila">#B1ACAC</color>
+
+    <!-- Lila Theme -->
+    <color name="colorPrimarySand">#feec97</color>
+    <color name="colorPrimaryVariantSand">#fcdf4d</color>
+    <color name="colorSecondarySand">#FD5523</color>
+    <color name="frontColorSand">#356859</color>
+    <color name="hintColorSand">#7CA397</color>
+
+    <!-- Blue Theme -->
+    <color name="colorPrimaryBlue">#5A8B9E</color>
+    <color name="colorPrimaryVariantBlue">#1F487E</color>
+    <color name="colorSecondaryBlue">#052753</color>
+    <color name="frontColorBlue">#F1DEDE</color>
+    <color name="hintColorBlue">#959090</color>
+</resources>

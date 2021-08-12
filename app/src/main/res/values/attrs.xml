@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="AlertBackground" format="reference" />
+    <attr name="frontColor" format="reference" />
+    <attr name="loopArrow" format="reference" />
+</resources>

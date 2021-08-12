@@ -1,0 +1,42 @@
+Funktionen:
+- übersetze deinen Text in bis zu 16 Sprachen
+- 5 verschiedene Designs
+- teile Übersetzungen einfach aus der App
+- komplett Quelloffen
+- mehr kommt...
+
+Unterstützte Sprachen (UI):
+- Englisch
+- Deutsch
+
+Unterstützte Sprachen (Übersetzung):
+- Arabisch
+- Chinesisch
+- Englisch
+- Französisch
+- Deutsch
+- Hindi
+- Indonesisch
+- Irisch
+- Italienisch
+- Japanisch
+- Koreanisch
+- Polnisch
+- Portugiesisch
+- Russisch
+- Spanisch
+- Türkisch
+- Vietnamesisch
+
+Übersetzung:
+Die <a href="https://libretranslate.de/">LibreTranslate</a>-API wird für die Übersetzung benutzt. LibreTranslate ist lizenziert unter der <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>.
+
+Wiki:
+Im <a href="https://gitlab.com/BeowuIf/libretranslater/-/wikis/home">Wiki</a> kannst du eine kurze UI-Erklärung zum einfachen Start finden.
+
+Lizenzierung:
+Lizenziert unter der <a href="https://gitlab.com/BeowuIf/libretranslater/-/blob/master/LICENSE">EUPL-1.2</a>.
+
+OpenSource:
+Diese Anwendung ist <a href="https://gitlab.com/BeowuIf/libretranslater">OpenSource</a>.
+ 
