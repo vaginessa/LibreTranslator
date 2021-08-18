@@ -180,6 +180,10 @@
             android:background="@drawable/left_round"
             android:contentDescription="@string/chooseSLanguage"
             android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="25dp"
+            android:paddingRight="25dp"
             android:textAlignment="center"
             android:textColor="?colorPrimary"
             android:textSize="22sp" />
@@ -192,6 +196,10 @@
             android:background="@drawable/right_round"
             android:contentDescription="@string/chooseTLanguage"
             android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="25dp"
+            android:paddingRight="25dp"
             android:textAlignment="center"
             android:textColor="?colorPrimary"
             android:textSize="22sp" />

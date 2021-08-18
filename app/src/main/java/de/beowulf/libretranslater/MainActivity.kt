@@ -2,10 +2,7 @@ package de.beowulf.libretranslater
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.os.Bundle
 import android.os.Handler
 import android.text.Editable
@@ -31,8 +28,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private var sourceLangId = 2
-    private var targetLangId = 4
+    private lateinit var settings: SharedPreferences
+    private var sourceLangId = 0
+    private var targetLangId = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(theme())
@@ -40,8 +38,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        sourceLangId = settings.getInt("Source", 2)
         setSourceLang()
+        targetLangId = settings.getInt("Target", 4)
         setTargetLang()
+
+        if (intent.action == Intent.ACTION_SEND) {
+            binding.SourceText.setText(intent.extras!!.getString(Intent.EXTRA_TEXT))
+            translateText()
+        }
 
         //check if source text changes and translate
         binding.SourceText.addTextChangedListener(object : TextWatcher {
@@ -83,30 +88,33 @@ class MainActivity : AppCompatActivity() {
 
         //actions with the translated text
         binding.CopyTranslation.setOnClickListener {
-            //copy translated text to clipboard
-            val clipboard: ClipboardManager =
-                getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip: ClipData = ClipData.newPlainText("translated text", binding.TranslatedTV.text)
-            clipboard.setPrimaryClip(clip)
-            //Message to inform the user
-            Snackbar.make(
-                binding.CopyTranslation,
-                getString(R.string.copiedClipboard),
-                Snackbar.LENGTH_LONG
-            ).show()
+            if (binding.TranslatedTV.text != "") {
+                //copy translated text to clipboard
+                val clipboard: ClipboardManager =
+                    getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val clip: ClipData =
+                    ClipData.newPlainText("translated text", binding.TranslatedTV.text)
+                clipboard.setPrimaryClip(clip)
+                //Message to inform the user
+                Snackbar.make(
+                    binding.CopyTranslation,
+                    getString(R.string.copiedClipboard),
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
         }
 
         binding.ShareTranslation.setOnClickListener {
-            //create share intent
-            val sendIntent: Intent = Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, binding.TranslatedTV.text)
-                type = "text/plain"
+            if (binding.TranslatedTV.text != "") {
+                //create share intent
+                val share = Intent.createChooser(Intent().apply {
+                    action = Intent.ACTION_SEND
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_TEXT, binding.TranslatedTV.text)
+                }, null)
+                //share translation
+                startActivity(share)
             }
-            val shareIntent: Intent =
-                Intent.createChooser(sendIntent, getString(R.string.shareTranslation))
-            //share translation
-            startActivity(shareIntent)
         }
 
         //language chooser
@@ -129,7 +137,6 @@ class MainActivity : AppCompatActivity() {
 
         //theme switcher
         binding.themeSwitcher.setOnClickListener {
-            val settings = getSharedPreferences("de.beowulf.libretranslater", 0)
             var newTheme = settings.getInt("Theme", 1) + 1
             if (newTheme == 5) {
                 newTheme = 0
@@ -161,28 +168,33 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun translateText() {
-        val url = URL("https://libretranslate.de/translate")
-        val connection: HttpsURLConnection = url.openConnection() as HttpsURLConnection
-        connection.requestMethod = "POST"
-        connection.setRequestProperty("accept", "application/json")
-        val data =
-            "q=${binding.SourceText.text}&source=${resources.getStringArray(R.array.LangCodes)[sourceLangId]}" +
-                    "&target=${resources.getStringArray(R.array.LangCodes)[targetLangId]}"
-        val out = data.toByteArray(Charsets.UTF_8)
-        @Suppress("BlockingMethodInNonBlockingContext")
-        CoroutineScope(Dispatchers.IO).launch {
-            val transString: String? = try {
-                val stream: OutputStream = connection.outputStream
-                stream.write(out)
-                val inputStream = DataInputStream(connection.inputStream)
-                val reader = BufferedReader(InputStreamReader(inputStream))
-                JSONObject(reader.readLine()).getString("translatedText")
-            } catch (e: Exception) {
-                null
+        if (binding.SourceText.text.toString() != "") {
+            val url = URL("https://libretranslate.de/translate")
+            val connection: HttpsURLConnection = url.openConnection() as HttpsURLConnection
+            connection.requestMethod = "POST"
+            connection.setRequestProperty("accept", "application/json")
+            val data =
+                "q=${binding.SourceText.text.replace(Regex("&"), "%26")}" +
+                        "&source=${resources.getStringArray(R.array.LangCodes)[sourceLangId]}" +
+                        "&target=${resources.getStringArray(R.array.LangCodes)[targetLangId]}"
+            val out = data.toByteArray(Charsets.UTF_8)
+            @Suppress("BlockingMethodInNonBlockingContext")
+            CoroutineScope(Dispatchers.IO).launch {
+                val transString: String? = try {
+                    val stream: OutputStream = connection.outputStream
+                    stream.write(out)
+                    val inputStream = DataInputStream(connection.inputStream)
+                    val reader = BufferedReader(InputStreamReader(inputStream))
+                    JSONObject(reader.readLine()).getString("translatedText")
+                } catch (e: Exception) {
+                    null
+                }
+                withContext(Dispatchers.Main) {
+                    binding.TranslatedTV.text = transString
+                }
             }
-            withContext(Dispatchers.Main) {
-                binding.TranslatedTV.text = transString
-            }
+        } else {
+            binding.TranslatedTV.text = ""
         }
     }
 
@@ -190,12 +202,18 @@ class MainActivity : AppCompatActivity() {
         val sourceLang = resources.getStringArray(R.array.Lang)[sourceLangId]
         binding.SourceLanguageTop.text = sourceLang
         binding.SourceLanguageBot.text = sourceLang
+        settings.edit()
+            .putInt("Source", sourceLangId)
+            .apply()
     }
 
     private fun setTargetLang() {
         val targetLang = resources.getStringArray(R.array.Lang)[targetLangId]
         binding.TargetLanguageTop.text = targetLang
         binding.TargetLanguageBot.text = targetLang
+        settings.edit()
+            .putInt("Target", targetLangId)
+            .apply()
     }
 
     private fun chooseLang(source: Boolean) {
@@ -220,7 +238,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun theme(): Int {
-        val settings = getSharedPreferences("de.beowulf.libretranslater", 0)
+        settings = getSharedPreferences("de.beowulf.libretranslater", 0)
         return when (settings.getInt("Theme", 1)) {
             1 -> {
                 R.style.DarkTheme
