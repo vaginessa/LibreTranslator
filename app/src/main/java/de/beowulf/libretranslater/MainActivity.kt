@@ -231,7 +231,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 translateText()
             }
-            .setNegativeButton(getString(R.string.abort)) { dialog, _ ->
+            .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
                 dialog.cancel()
             }
             .show()

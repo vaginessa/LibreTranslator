@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">LibreTranslater</string>
+
+    <string name="about">À propos</string>
+    <string name="switch_theme">Changer de thème</string>
+    <string name="removeText">Enlever le texte</string>
+    <string name="typeToTranslate">Écrire le texte à traduire…</string>
+    <string name="copy">Copier</string>
+    <string name="share">Partager</string>
+    <string name="chooseSLanguage">Choisir la langue d\'origine</string>
+    <string name="chooseTLanguage">Choisir la langue cible</string>
+    <string name="switchLanguages">Echanger les langues</string>
+
+    <string name="rlyRemoveText">Voulez-vous supprimer le texte ?</string>
+    <string name="shareTranslation">Partagez votre traduction</string>
+    <string name="copiedClipboard">Copié vers le presse-papier</string>
+    <string name="chooseLang">Choisir une langue</string>
+    <string name="cancel">Annuler</string>
+
+    <string name="base">Basé sur <a href="https://libretranslate.de/">LibreTranslate-API</a>, sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
+    <string name="reportError">Vous avez trouvé une erreur? Comportement étrange?\\nFaites en part sur <a href="https://gitlab.com/BeowuIf/libretranslater/-/issues">GitLab</a> ou par <a href="mailto:incoming+beowuif-libretranslater-28803428-issue-@incoming.gitlab.com">e-mail</a></string>
+    <string name="created_by">Créé par <a href="https://gitlab.com/BeowuIf/libretranslater/">Beowulf</a> sous licence <a href="https://gitlab.com/BeowuIf/libretranslater/-/blob/master/LICENSE">EUPL-1.2</a></string>
+    <string name="close">Fermer</string>
+
+    <string-array name="Lang">
+        <item>Arabe</item>
+        <item>Chinois</item>
+        <item>Anglais</item>
+        <item>Français</item>
+        <item>Allemand</item>
+        <item>Hindi</item>
+        <item>Indonésien</item>
+        <item>Irlandais</item>
+        <item>Italien</item>
+        <item>Japonais</item>
+        <item>Coréen</item>
+        <item>Polonais</item>
+        <item>Portugais</item>
+        <item>Russe</item>
+        <item>Espagnol</item>
+        <item>Turc</item>
+        <item>Vietnamien</item>
+    </string-array>
+</resources>
