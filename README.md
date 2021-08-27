@@ -2,6 +2,13 @@
 
 <img src="https://gitlab.com/BeowuIf/libretranslater/-/raw/master/app/src/main/ic_launcher-playstore.png" height=75px> **LibreTranslater a translator based on LibreTranslate**
 
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="60">](https://f-droid.org/packages/de.beowulf.libretranslater/)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+     alt="Get it on Google Play"
+     height="60">](https://play.google.com/store/apps/details?id=de.beowulf.libretranslater)
+
 ## Features
 - translate your text into up to 16 languages
 - 5 different themes
