@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                 getString(R.string.rlyRemoveText),
                 Snackbar.LENGTH_INDEFINITE
             )
-                .setAction("Remove") {
+                .setAction(R.string.remove) {
                     //remove text
                     binding.SourceText.text = null
                     binding.TranslatedTV.text = null
