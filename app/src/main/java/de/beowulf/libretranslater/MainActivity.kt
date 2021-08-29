@@ -22,6 +22,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 import android.os.Looper
 import android.text.method.LinkMovementMethod
+import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -151,17 +152,33 @@ class MainActivity : AppCompatActivity() {
         //About dialog
         binding.info.setOnClickListener {
             val about: View = layoutInflater.inflate(R.layout.about, null)
+            val serverET = about.findViewById<EditText>(R.id.Server)
+            val apiET = about.findViewById<EditText>(R.id.Api)
             val tv1 = about.findViewById<TextView>(R.id.aboutTV1)
             val tv2 = about.findViewById<TextView>(R.id.aboutTV2)
             val tv3 = about.findViewById<TextView>(R.id.aboutTV3)
+            var server: String? = settings.getString("server", "libretranslate.de")
+            val apiKey: String? = settings.getString("apiKey", "")
+            serverET.setText(server)
+            apiET.setText(apiKey)
             tv1.movementMethod = LinkMovementMethod.getInstance()
             tv2.movementMethod = LinkMovementMethod.getInstance()
             tv3.movementMethod = LinkMovementMethod.getInstance()
             val popUp = AlertDialog.Builder(this, R.style.AlertDialog)
             popUp.setView(about)
-                .setPositiveButton(getString(R.string.close)) { dialog, _ ->
-                    dialog.dismiss()
+                .setTitle(getString(R.string.app_name))
+                .setPositiveButton(getString(R.string.save)) { _, _ ->
+                    //Remove http/https/www and /translate to prevent errors
+                    server = serverET.text.toString().replace("http://", "")
+                        .replace("https://", "")
+                        .replace("www.", "")
+                        .replace("/translate", "")
+                    settings.edit()
+                        .putString("server", server)
+                        .putString("apiKey", apiET.text.toString())
+                        .apply()
                 }
+                .setNegativeButton(getString(R.string.close)) {_ , _ -> }
                 .show()
 
         }
@@ -169,14 +186,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun translateText() {
         if (binding.SourceText.text.toString() != "") {
-            val url = URL("https://libretranslate.de/translate")
+            val server: String? = settings.getString("server", "libretranslate.de")
+            val apiKey: String? = settings.getString("apiKey", "")
+            val url = URL("https://$server/translate")
             val connection: HttpsURLConnection = url.openConnection() as HttpsURLConnection
             connection.requestMethod = "POST"
             connection.setRequestProperty("accept", "application/json")
             val data =
                 "q=${binding.SourceText.text.replace(Regex("&"), "%26")}" +
                         "&source=${resources.getStringArray(R.array.LangCodes)[sourceLangId]}" +
-                        "&target=${resources.getStringArray(R.array.LangCodes)[targetLangId]}"
+                        "&target=${resources.getStringArray(R.array.LangCodes)[targetLangId]}" +
+                        if (apiKey != "") {
+                            "api_key=$apiKey"
+                        } else {
+                            ""
+                        }
             val out = data.toByteArray(Charsets.UTF_8)
             @Suppress("BlockingMethodInNonBlockingContext")
             CoroutineScope(Dispatchers.IO).launch {
@@ -231,7 +255,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 translateText()
             }
-            .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
+            .setNegativeButton(getString(R.string.abort)) { dialog, _ ->
                 dialog.cancel()
             }
             .show()

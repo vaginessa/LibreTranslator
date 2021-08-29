@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LibreTranslater</string>
 
-    <string name="about">Sobre</string>
+    <string name="aboutAndSettings">Sobre</string>
     <string name="switch_theme">mudar tema</string>
     <string name="removeText">remover texto</string>
     <string name="typeToTranslate">digite para traduzir…</string>
@@ -12,33 +12,57 @@
     <string name="switchLanguages">trocar idiomas</string>
 
     <string name="rlyRemoveText">Deseja realmente remover o texto?</string>
+    <string name="remove">Remove</string>
     <string name="shareTranslation">Compartilhe sua tradução</string>
     <string name="copiedClipboard">Copiado para a área de transferência</string>
     <string name="chooseLang">Escolha o idioma</string>
-    <string name="cancel">Abortar</string>
+    <string name="save">Salvar</string>
+    <string name="abort">Abortar</string>
 
+    <string name="addCustomServer">Enter custom server URL</string>
+    <string name="addApiKey">Add API key (if necessary)</string>
     <string name="base">Baseado no <a href="https://libretranslate.de/">LibreTranslate-API</a>, licenciado sob a <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
     <string name="reportError">Encontrou uma falha? Comportamento estranho?\nSubmeta um feedback no <a href="https://gitlab.com/BeowuIf/libretranslater/-/issues">GitLab</a> ou via <a href="mailto:incoming+beowuif-libretranslater-28803428-issue-@incoming.gitlab.com">email</a></string>
     <string name="created_by">Criado por <a href="https://gitlab.com/BeowuIf/weather/">Beowulf</a> licenciado sob a <a href="https://gitlab.com/BeowuIf/weather/-/blob/master/LICENSE">EUPL-1.2</a></string>
     <string name="close">Fechar</string>
 
     <string-array name="Lang">
+        <item>Alemão</item>
         <item>Árabe</item>
         <item>Chinês</item>
-        <item>Inglês</item>
+        <item>Coreano</item>
+        <item>Espanhol</item>
         <item>Francês</item>
-        <item>Alemão</item>
         <item>Hindi</item>
         <item>Indonésio</item>
+        <item>Inglês</item>
         <item>Irlandês</item>
         <item>Italiano</item>
         <item>Japonês</item>
-        <item>Coreano</item>
         <item>Polonês</item>
         <item>Português</item>
         <item>Russo</item>
-        <item>Espanhol</item>
         <item>Turco</item>
         <item>Vietnamita</item>
+    </string-array>
+
+    <string-array name="LangCodes">
+        <item>de</item>
+        <item>ar</item>
+        <item>zh</item>
+        <item>ko</item>
+        <item>es</item>
+        <item>fr</item>
+        <item>hi</item>
+        <item>id</item>
+        <item>en</item>
+        <item>ga</item>
+        <item>it</item>
+        <item>ja</item>
+        <item>pl</item>
+        <item>pt</item>
+        <item>ru</item>
+        <item>tr</item>
+        <item>vi</item>
     </string-array>
 </resources>
