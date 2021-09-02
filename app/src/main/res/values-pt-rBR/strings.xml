@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LibreTranslater</string>
 
-    <string name="aboutAndSettings">Sobre</string>
+    <string name="aboutAndSettings">Sobre e Configurações</string>
     <string name="switch_theme">mudar tema</string>
     <string name="removeText">remover texto</string>
     <string name="typeToTranslate">digite para traduzir…</string>
@@ -12,15 +12,15 @@
     <string name="switchLanguages">trocar idiomas</string>
 
     <string name="rlyRemoveText">Deseja realmente remover o texto?</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Remover</string>
     <string name="shareTranslation">Compartilhe sua tradução</string>
     <string name="copiedClipboard">Copiado para a área de transferência</string>
     <string name="chooseLang">Escolha o idioma</string>
     <string name="save">Salvar</string>
     <string name="abort">Abortar</string>
 
-    <string name="addCustomServer">Enter custom server URL</string>
-    <string name="addApiKey">Add API key (if necessary)</string>
+    <string name="addCustomServer">Insira URL customizada de servidor</string>
+    <string name="addApiKey">Adicionar chave API (se necessário)</string>
     <string name="base">Baseado no <a href="https://libretranslate.de/">LibreTranslate-API</a>, licenciado sob a <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
     <string name="reportError">Encontrou uma falha? Comportamento estranho?\nSubmeta um feedback no <a href="https://gitlab.com/BeowuIf/libretranslater/-/issues">GitLab</a> ou via <a href="mailto:incoming+beowuif-libretranslater-28803428-issue-@incoming.gitlab.com">email</a></string>
     <string name="created_by">Criado por <a href="https://gitlab.com/BeowuIf/weather/">Beowulf</a> licenciado sob a <a href="https://gitlab.com/BeowuIf/weather/-/blob/master/LICENSE">EUPL-1.2</a></string>

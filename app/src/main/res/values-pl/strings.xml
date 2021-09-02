@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LibreTranslater</string>
 
-    <string name="aboutAndSettings">O aplikacji</string>
+    <string name="aboutAndSettings">O aplikacji i ustawienia</string>
     <string name="switch_theme">przełącz motyw</string>
     <string name="removeText">usuń tekst</string>
     <string name="typeToTranslate">wpisz, aby przetłumaczyć</string>
