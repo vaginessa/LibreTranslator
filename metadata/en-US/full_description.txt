@@ -32,10 +32,10 @@ Translation:
 The <a href="https://libretranslate.de/">LibreTranslate</a> API is used for the translation. LibreTranslate is licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>.
 
 Wiki:
-In the <a href="https://gitlab.com/BeowuIf/libretranslater/-/wikis/home">Wiki</a> you can find a short UI explanation to get started.
+In the <a href="https://gitlab.com/BeowuIf/libretranslator/-/wikis/home">Wiki</a> you can find a short UI explanation to get started.
 
 Licensing:
-Licensed under the <a href="https://gitlab.com/BeowuIf/libretranslater/-/blob/master/LICENSE">EUPL-1.2</a>.
+Licensed under the <a href="https://gitlab.com/BeowuIf/libretranslator/-/blob/master/LICENSE">EUPL-1.2</a>.
 
 OpenSource:
-This app is <a href="https://gitlab.com/BeowuIf/libretranslater">open source</a>.
+This app is <a href="https://gitlab.com/BeowuIf/libretranslator">open source</a>.

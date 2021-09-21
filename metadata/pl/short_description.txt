@@ -1,1 +1,1 @@
-LibreTranslater to tłumacz oparty na LibreTranslate
+LibreTranslator to tłumacz oparty na LibreTranslate

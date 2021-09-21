@@ -24,6 +24,7 @@ import android.os.Looper
 import android.text.method.LinkMovementMethod
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -67,29 +68,31 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.RemoveSourceText.setOnClickListener {
-            //Ask if the text really should be removed
-            //ToDo: Maybe use another solution then Snackbar
-            Snackbar.make(
-                binding.RemoveSourceText,
-                getString(R.string.rlyRemoveText),
-                Snackbar.LENGTH_INDEFINITE
-            )
-                .setAction(R.string.remove) {
-                    //remove text
-                    binding.SourceText.text = null
-                    binding.TranslatedTV.text = null
-                }
-                .show()
-            //Hide keyboard
-            val imm: InputMethodManager =
-                getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
-            val view: View? = currentFocus
-            imm.hideSoftInputFromWindow(view?.windowToken, 0)
+            if (binding.TranslatedTV.text.toString() != "") {
+                //Ask if the text really should be removed
+                //ToDo: Maybe use another solution then Snackbar
+                Snackbar.make(
+                    binding.RemoveSourceText,
+                    getString(R.string.rlyRemoveText),
+                    Snackbar.LENGTH_INDEFINITE
+                )
+                    .setAction(R.string.remove) {
+                        //remove text
+                        binding.SourceText.text = null
+                        binding.TranslatedTV.text = null
+                    }
+                    .show()
+                //Hide keyboard
+                val imm: InputMethodManager =
+                    getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+                val view: View? = currentFocus
+                imm.hideSoftInputFromWindow(view?.windowToken, 0)
+            }
         }
 
         //actions with the translated text
         binding.CopyTranslation.setOnClickListener {
-            if (binding.TranslatedTV.text != "") {
+            if (binding.TranslatedTV.text.toString() != "") {
                 //copy translated text to clipboard
                 val clipboard: ClipboardManager =
                     getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
@@ -106,7 +109,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.ShareTranslation.setOnClickListener {
-            if (binding.TranslatedTV.text != "") {
+            if (binding.TranslatedTV.text.toString() != "") {
                 //create share intent
                 val share = Intent.createChooser(Intent().apply {
                     action = Intent.ACTION_SEND
@@ -214,6 +217,8 @@ class MainActivity : AppCompatActivity() {
                     null
                 }
                 withContext(Dispatchers.Main) {
+                    if (transString == null)
+                        Toast.makeText(this@MainActivity, R.string.netError, Toast.LENGTH_SHORT).show()
                     binding.TranslatedTV.text = transString
                 }
             }

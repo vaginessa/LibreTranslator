@@ -1,6 +1,6 @@
-# LibreTranslater
+# LibreTranslator
 
-<img src="https://gitlab.com/BeowuIf/libretranslater/-/raw/master/app/src/main/ic_launcher-playstore.png" height=75px> **LibreTranslater a translator based on LibreTranslate**
+<img src="https://gitlab.com/BeowuIf/libretranslator/-/raw/master/app/src/main/ic_launcher-playstore.png" height=75px> **LibreTranslator a translator based on LibreTranslate**
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
@@ -46,7 +46,7 @@ The [LibreTranslate](https://libretranslate.de/) API is used for the translation
 See our [Contributing doc](CONTRIBUTING.md) for information on how to report issues or translate the app into your language.
 
 ## Wiki
-In the [Wiki](https://gitlab.com/BeowuIf/libretranslater/-/wikis/home) you can find a short UI explanation to get started.
+In the [Wiki](https://gitlab.com/BeowuIf/libretranslator/-/wikis/home) you can find a short UI explanation to get started.
 
 ## Licensing
 See the [LICENSE](LICENSE) file for licensing information as it pertains to files in this repository.

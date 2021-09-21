@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LibreTranslater</string>
+    <string name="app_name" translatable="false">LibreTranslator</string>
 
     <string name="aboutAndSettings">About and Settings</string>
     <string name="switch_theme">switch theme</string>
@@ -18,12 +18,13 @@
     <string name="chooseLang">Choose language</string>
     <string name="save">Save</string>
     <string name="abort">Abort</string>
+    <string name="netError">Connection to server failed - check your internet connection</string>
 
     <string name="addCustomServer">Enter custom server URL</string>
     <string name="addApiKey">Add API key (if necessary)</string>
     <string name="base">Based on <a href="https://libretranslate.de/">LibreTranslate-API</a>, licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
-    <string name="reportError">Found a mistake? Strange behaviour?\nReport it on <a href="https://gitlab.com/BeowuIf/libretranslater/-/issues">GitLab</a> or via <a href="mailto:incoming+beowuif-libretranslater-28803428-issue-@incoming.gitlab.com">email</a></string>
-    <string name="created_by">Created by <a href="https://gitlab.com/BeowuIf/libretranslater/">Beowulf</a> licensed under <a href="https://gitlab.com/BeowuIf/libretranslater/-/blob/master/LICENSE">EUPL-1.2</a></string>
+    <string name="reportError">Found a mistake? Strange behaviour?\nReport it on <a href="https://gitlab.com/BeowuIf/libretranslator/-/issues">GitLab</a> or via <a href="mailto:incoming+beowuif-libretranslator-28803428-issue-@incoming.gitlab.com">email</a></string>
+    <string name="created_by">Created by <a href="https://gitlab.com/BeowuIf/libretranslator/">Beowulf</a> licensed under <a href="https://gitlab.com/BeowuIf/libretranslator/-/blob/master/LICENSE">EUPL-1.2</a></string>
     <string name="close">Close</string>
 
     <string-array name="Lang">
