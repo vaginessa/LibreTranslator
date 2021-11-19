@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
             override fun afterTextChanged(editable: Editable) {
                 handler.removeCallbacks(workRunnable)
                 handler.postDelayed(workRunnable, 500 /*delay*/)
+                binding.translationPending.visibility = View.VISIBLE
             }
         })
 
@@ -200,7 +201,7 @@ class MainActivity : AppCompatActivity() {
                         "&source=${resources.getStringArray(R.array.LangCodes)[sourceLangId]}" +
                         "&target=${resources.getStringArray(R.array.LangCodes)[targetLangId]}" +
                         if (apiKey != "") {
-                            "api_key=$apiKey"
+                            "&api_key=$apiKey"
                         } else {
                             ""
                         }
@@ -220,10 +221,12 @@ class MainActivity : AppCompatActivity() {
                     if (transString == null)
                         Toast.makeText(this@MainActivity, R.string.netError, Toast.LENGTH_SHORT).show()
                     binding.TranslatedTV.text = transString
+                    binding.translationPending.visibility = View.GONE
                 }
             }
         } else {
             binding.TranslatedTV.text = ""
+            binding.translationPending.visibility = View.GONE
         }
     }
 
