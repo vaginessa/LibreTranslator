@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.RemoveSourceText.setOnClickListener {
-            if (binding.TranslatedTV.text.toString() != "") {
+            if (binding.SourceText.text.toString() != "") {
                 //Ask if the text really should be removed
                 //ToDo: Maybe use another solution then Snackbar
                 Snackbar.make(
@@ -208,6 +208,7 @@ class MainActivity : AppCompatActivity() {
             val out = data.toByteArray(Charsets.UTF_8)
             @Suppress("BlockingMethodInNonBlockingContext")
             CoroutineScope(Dispatchers.IO).launch {
+                var serverError = ""
                 val transString: String? = try {
                     val stream: OutputStream = connection.outputStream
                     stream.write(out)
@@ -215,11 +216,16 @@ class MainActivity : AppCompatActivity() {
                     val reader = BufferedReader(InputStreamReader(inputStream))
                     JSONObject(reader.readLine()).getString("translatedText")
                 } catch (e: Exception) {
+                    serverError = try {
+                        JSONObject(connection.errorStream.reader().readText()).getString("error")
+                    } catch (e: Exception) {
+                        getString(R.string.netError)
+                    }
                     null
                 }
                 withContext(Dispatchers.Main) {
                     if (transString == null)
-                        Toast.makeText(this@MainActivity, R.string.netError, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, serverError, Toast.LENGTH_SHORT).show()
                     binding.TranslatedTV.text = transString
                     binding.translationPending.visibility = View.GONE
                 }
