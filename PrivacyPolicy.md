@@ -21,5 +21,5 @@ This privacy policy may get modified from time to time.
 THis policy is effective as of 2021-11-22.
 
 ## Contact
-Questions and suggestions about the Weather app can be sent to us via [email](mailto:contact-project+beowuif-libretranslator-28803428-issue-@incoming.gitlab.com) or directly through the [ticket system](https://gitlab.com/BeowuIf/libretranslator/-/issues).  
+Questions and suggestions about the LibreTranslator app can be sent to us via [email](mailto:contact-project+beowuif-libretranslator-28803428-issue-@incoming.gitlab.com) or directly through the [ticket system](https://gitlab.com/BeowuIf/libretranslator/-/issues).  
 When you send an email, a confidential ticket is created in the GitLab repository and your email address is stored.
