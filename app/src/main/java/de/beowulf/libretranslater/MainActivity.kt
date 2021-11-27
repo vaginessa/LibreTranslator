@@ -25,6 +25,7 @@ import android.text.method.LinkMovementMethod
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,19 +71,28 @@ class MainActivity : AppCompatActivity() {
 
         binding.RemoveSourceText.setOnClickListener {
             if (binding.SourceText.text.toString() != "") {
-                //Ask if the text really should be removed
-                //ToDo: Maybe use another solution then Snackbar
-                Snackbar.make(
-                    binding.RemoveSourceText,
-                    getString(R.string.rlyRemoveText),
-                    Snackbar.LENGTH_INDEFINITE
-                )
-                    .setAction(R.string.remove) {
-                        //remove text
-                        binding.SourceText.text = null
-                        binding.TranslatedTV.text = null
-                    }
-                    .show()
+                if (settings.getBoolean("ask", true)) {
+                    MaterialAlertDialogBuilder(this, R.style.AlertDialog)
+                        .setMessage(getString(R.string.rlyRemoveText))
+                        .setPositiveButton(R.string.remove) { dialog, _ ->
+                            binding.SourceText.text = null
+                            binding.TranslatedTV.text = null
+                            dialog.dismiss()
+                        }
+                        .setNeutralButton(getString(R.string.neverAskAgain)) { dialog, _ ->
+                            settings.edit()
+                                .putBoolean("ask", false)
+                                .apply()
+                            binding.SourceText.text = null
+                            binding.TranslatedTV.text = null
+                            dialog.dismiss()
+                        }
+                        .show()
+                } else {
+                    binding.SourceText.text = null
+                    binding.TranslatedTV.text = null
+                }
+
                 //Hide keyboard
                 val imm: InputMethodManager =
                     getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager

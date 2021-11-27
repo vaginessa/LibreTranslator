@@ -12,6 +12,7 @@
     <string name="switchLanguages">switch languages</string>
 
     <string name="rlyRemoveText">Really remove the text?</string>
+    <string name="neverAskAgain">Never ask again</string>
     <string name="remove">Remove</string>
     <string name="shareTranslation">Share your translation</string>
     <string name="copiedClipboard">Copied to Clipboard</string>

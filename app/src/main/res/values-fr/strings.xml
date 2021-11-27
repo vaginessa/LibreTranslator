@@ -10,6 +10,7 @@
     <string name="switchLanguages">Echanger les langues</string>
 
     <string name="rlyRemoveText">Voulez-vous supprimer le texte?</string>
+    <string name="neverAskAgain">Never ask again</string>
     <string name="remove">Supprimer</string>
     <string name="shareTranslation">Partagez votre traduction</string>
     <string name="copiedClipboard">Copié vers le presse-papier</string>
