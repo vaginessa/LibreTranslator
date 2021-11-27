@@ -1,0 +1,67 @@
+<resources>
+    <string name="aboutAndSettings">Hakkında ve Ayarlar</string>
+    <string name="switch_theme">temayı değiştir</string>
+    <string name="removeText">metni kaldır</string>
+    <string name="typeToTranslate">çevirmek için yaz…</string>
+    <string name="copy">kopyala</string>
+    <string name="share">paylaş</string>
+    <string name="chooseSLanguage">kaynak dili seç</string>
+    <string name="chooseTLanguage">hedef dili seç</string>
+    <string name="switchLanguages">dilleri değiştir</string>
+
+    <string name="rlyRemoveText">Metin gerçekten kaldırılsın mı?</string>
+    <string name="remove">Kaldır</string>
+    <string name="shareTranslation">Çevirinizi paylaşın</string>
+    <string name="copiedClipboard">Panoya kopyalandı</string>
+    <string name="chooseLang">Dil seç</string>
+    <string name="save">Kaydet</string>
+    <string name="abort">İptal</string>
+    <string name="netError">Sunucuya bağlantı başarısız oldu - internet bağlantınızı gözden geçirin</string>
+
+    <string name="addCustomServer">Özel sunucu URL\'si gir</string>
+    <string name="addApiKey">API anahtarı ekle (gerekliyse)</string>
+    <string name="base"><a href="https://www.gnu.org/licenses/agpl-3.0.tr.html">AGPLv3</a> altında lisanslanan <a href="https://libretranslate.de/">LibreTranslate-API</a>\'sine dayalı</string>
+    <string name="reportError">Bir hata mı buldunuz? Garip bir davranış?\n<a href="https://gitlab.com/BeowuIf/libretranslator/-/issues">GitLab</a> sayfasında veya <a href="mailto:incoming+beowuif-libretranslator-28803428-issue-@incoming.gitlab.com">e-posta</a> ile bildirin</string>
+    <string name="created_by"><a href="https://gitlab.com/BeowuIf/libretranslator/">Beowulf</a> tarafından oluşturuldu ve <a href="https://gitlab.com/BeowuIf/libretranslator/-/blob/master/LICENSE">EUPL-1.2</a> altında lisanslandı</string>
+    <string name="close">Kapat</string>
+
+    <string-array name="Lang">
+        <item>Almanca</item>
+        <item>Arapça</item>
+        <item>Çince</item>
+        <item>Endonezyaca</item>
+        <item>Fransızca</item>
+        <item>Hintçe</item>
+        <item>İngilizce</item>
+        <item>İrlandaca</item>
+        <item>İspanyolca</item>
+        <item>İtalyanca</item>
+        <item>Japonca</item>
+        <item>Korece</item>
+        <item>Lehçe</item>
+        <item>Portekizce</item>
+        <item>Rusça</item>
+        <item>Türkçe</item>
+        <item>Vietnamca</item>
+    </string-array>
+
+    <string-array name="LangCodes">
+        <item>de</item>
+        <item>ar</item>
+        <item>zh</item>
+        <item>id</item>
+        <item>fr</item>
+        <item>hi</item>
+        <item>en</item>
+        <item>ga</item>
+        <item>es</item>
+        <item>it</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>pl</item>
+        <item>pt</item>
+        <item>ru</item>
+        <item>tr</item>
+        <item>vi</item>
+    </string-array>
+</resources>
