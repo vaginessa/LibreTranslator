@@ -26,6 +26,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import android.view.WindowManager
+import android.widget.CheckBox
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +42,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if (settings.getBoolean("shrink", false))
+            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
 
         sourceLangId = settings.getInt("Source", 2)
         setSourceLang()
@@ -168,13 +173,16 @@ class MainActivity : AppCompatActivity() {
             val about: View = layoutInflater.inflate(R.layout.about, null)
             val serverET = about.findViewById<EditText>(R.id.Server)
             val apiET = about.findViewById<EditText>(R.id.Api)
+            val shrinkCB = about.findViewById<CheckBox>(R.id.Shrink)
             val tv1 = about.findViewById<TextView>(R.id.aboutTV1)
             val tv2 = about.findViewById<TextView>(R.id.aboutTV2)
             val tv3 = about.findViewById<TextView>(R.id.aboutTV3)
             var server: String? = settings.getString("server", "libretranslate.de")
             val apiKey: String? = settings.getString("apiKey", "")
+            val shrink: Boolean = settings.getBoolean("shrink", false)
             serverET.setText(server)
             apiET.setText(apiKey)
+            shrinkCB.isChecked = shrink
             tv1.movementMethod = LinkMovementMethod.getInstance()
             tv2.movementMethod = LinkMovementMethod.getInstance()
             tv3.movementMethod = LinkMovementMethod.getInstance()
@@ -191,6 +199,14 @@ class MainActivity : AppCompatActivity() {
                         .putString("server", server)
                         .putString("apiKey", apiET.text.toString())
                         .apply()
+
+                    if (shrink != shrinkCB.isChecked) {
+                        settings.edit()
+                            .putBoolean("shrink", shrinkCB.isChecked)
+                            .apply()
+                        finish()
+                        startActivity(intent)
+                    }
                 }
                 .setNegativeButton(getString(R.string.close)) {_ , _ -> }
                 .show()

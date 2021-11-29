@@ -21,6 +21,7 @@
 
     <string name="addCustomServer">Entrer une URL de serveur personnalisée</string>
     <string name="addApiKey">Ajouter une clé API (si nécessaire)</string>
+    <string name="shrink_view">Shrink view above keyboard</string>
     <string name="base">Basé sur <a href="https://libretranslate.de/">LibreTranslate-API</a>, sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
     <string name="reportError">Vous avez trouvé une erreur? Comportement étrange?\\nFaites en part sur <a href="https://gitlab.com/BeowuIf/libretranslator/-/issues">GitLab</a> ou par <a href="mailto:incoming+beowuif-libretranslator-28803428-issue-@incoming.gitlab.com">e-mail</a></string>
     <string name="created_by">Créé par <a href="https://gitlab.com/BeowuIf/libretranslator/">Beowulf</a> sous licence <a href="https://gitlab.com/BeowuIf/libretranslator/-/blob/master/LICENSE">EUPL-1.2</a></string>

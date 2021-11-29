@@ -42,6 +42,20 @@
         android:layout_margin="15dp"
         android:background="?frontColor" />
 
+    <CheckBox
+        android:id="@+id/Shrink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shrink_view"
+        android:textColor="?attr/frontColor" />
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:background="?frontColor" />
+
     <TextView
         android:id="@+id/aboutTV1"
         android:layout_width="wrap_content"
