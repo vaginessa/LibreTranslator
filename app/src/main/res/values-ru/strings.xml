@@ -1,0 +1,69 @@
+<resources>
+    <string name="aboutAndSettings">Информация и настройки</string>
+    <string name="switch_theme">выбрать тему</string>
+    <string name="removeText">удалить текст</string>
+    <string name="typeToTranslate">введите текст для перевода…</string>
+    <string name="copy">копировать</string>
+    <string name="share">поделиться</string>
+    <string name="chooseSLanguage">выбрать язык текста</string>
+    <string name="chooseTLanguage">выбрать язык перевода</string>
+    <string name="switchLanguages">сменить язык</string>
+
+    <string name="rlyRemoveText">Действительно удалить текст?</string>
+    <string name="neverAskAgain">Never ask again</string>
+    <string name="remove">Удалить</string>
+    <string name="shareTranslation">Поделиться своим переводом</string>
+    <string name="copiedClipboard">Скопировано в буфер обмена</string>
+    <string name="chooseLang">Выбрать язык</string>
+    <string name="save">Сохранить</string>
+    <string name="abort">Прервать</string>
+    <string name="netError">Connection to server failed - check your internet connection</string>
+
+    <string name="addCustomServer">Введите URL адресс сервера</string>
+    <string name="addApiKey">Добавить API ключ (если нужно)</string>>
+    <string name="shrink_view">Fit view above keyboard</string>
+    <string name="base">Основано на <a href="https://libretranslate.de/">LibreTranslate-API</a>, лицензировано под <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
+    <string name="reportError">Нашли ошибку? Странное поведение?\\nОтправьте сообщение на <a href="https://gitlab.com/BeowuIf/libretranslater/-/issues">GitLab</a> или по <a href="mailto:incoming+beowuif-libretranslater-28803428-issue-@incoming.gitlab.com">электронной почте</a></string>
+    <string name="created_by">Создан <a href="https://gitlab.com/BeowuIf/libretranslater/">Beowulf</a> по лицензии <a href="https://gitlab.com/BeowuIf/libretranslater/-/blob/master/LICENSE">EUPL-1.2</a></string>
+    <string name="close">Отмена</string>
+
+    <string-array name="Lang">
+        <item>Английский</item>
+        <item>Арабский</item>
+        <item>Вьетнамский</item>
+        <item>Индонезийский</item>
+        <item>Ирландский</item>
+        <item>Испанский</item>
+        <item>Итальянский</item>
+        <item>Китайский</item>
+        <item>Корейский</item>
+        <item>Немецкий</item>
+        <item>Польский</item>
+        <item>Португальский</item>
+        <item>Русский</item>
+        <item>Турецкий</item>
+        <item>Французский</item>
+        <item>Хинди</item>
+        <item>Японский</item>
+    </string-array>
+
+    <string-array name="LangCodes">
+        <item>en</item>
+        <item>ar</item>
+        <item>vi</item>
+        <item>id</item>
+        <item>ga</item>
+        <item>es</item>
+        <item>it</item>
+        <item>zh</item>
+        <item>ko</item>
+        <item>de</item>
+        <item>pl</item>
+        <item>pt</item>
+        <item>ru</item>
+        <item>tr</item>
+        <item>fr</item>
+        <item>hi</item>
+        <item>ja</item>
+    </string-array>
+</resources>
