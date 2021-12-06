@@ -1,8 +1,0 @@
-- You can now use your own server for translations
-- can now receive shared text for translation
-- last selected languages are cached
-- new languages:
-    - french (thx Raghnarok05)
-    - polish (thx Gnu. ewm & Agnieszka C)
-    - portuguese (thx Rodolfocandido10)
-- languages are sorted alphabetically (in all languages)

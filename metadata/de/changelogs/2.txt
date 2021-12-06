@@ -1,8 +1,0 @@
-- Hinterlegen eines eigenen Servers zur Übersetzung nun möglich
-- kann nun geteilten Text zum Übersetzen empfangen
-- zuletzt ausgewählte Sprachen werden zwischengespeichert
-- neue Sprachen:
-    - französisch (thx Raghnarok05)
-    - Polnisch (thx Gnu. ewm & Agnieszka C)
-    - portugiesisch (thx Rodolfocandido10)
-- Sprachen sind nun alphabetisch sortiert (in allen Sprachen)

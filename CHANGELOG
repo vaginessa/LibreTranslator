@@ -1,3 +1,13 @@
+# 1.01
+
+- changed app name
+- fix for servers that require API authentication
+- error message if there's no connection to server
+- error message if translation fails
+- choose if view should be fitted above keyboard or not
+- turkish translation added (thx Oğuz Ersen)
+- russian translation added (thx Koplenov)
+##
 # 1.00
 
 - You can now use your own server for translations
