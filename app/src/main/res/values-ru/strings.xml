@@ -18,6 +18,7 @@
     <string name="save">Сохранить</string>
     <string name="abort">Прервать</string>
     <string name="netError">Connection to server failed - check your internet connection</string>
+    <string name="langError">is not a valid language - please report this if this is an actual language code</string>
 
     <string name="addCustomServer">Введите URL адресс сервера</string>
     <string name="addApiKey">Добавить API ключ (если нужно)</string>>
@@ -45,25 +46,53 @@
         <item>Французский</item>
         <item>Хинди</item>
         <item>Японский</item>
+        <item>Azerbaijani</item>
+        <item>Czech</item>
+        <item>Dutch</item>
+        <item>Esperanto</item>
+        <item>Finnish</item>
+        <item>Greek</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Persian</item>
+        <item>Slovak</item>
+        <item>Swedish</item>
+        <item>Ukranian</item>
+        <item>Danish</item>
+        <item>Norwegian</item>
     </string-array>
 
     <string-array name="LangCodes">
-        <item>en</item>
         <item>ar</item>
-        <item>vi</item>
+        <item>zh</item>
+        <item>en</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>hi</item>
         <item>id</item>
         <item>ga</item>
-        <item>es</item>
         <item>it</item>
-        <item>zh</item>
+        <item>ja</item>
         <item>ko</item>
-        <item>de</item>
         <item>pl</item>
         <item>pt</item>
         <item>ru</item>
+        <item>es</item>
         <item>tr</item>
-        <item>fr</item>
-        <item>hi</item>
-        <item>ja</item>
+        <item>vi</item>
+        <item>az</item>
+        <item>cs</item>
+        <item>nl</item>
+        <item>eo</item>
+        <item>fi</item>
+        <item>el</item>
+        <item>hu</item>
+        <item>id</item>
+        <item>fa</item>
+        <item>sk</item>
+        <item>sv</item>
+        <item>uk</item>
+        <item>da</item>
+        <item>no</item>
     </string-array>
 </resources>

@@ -5,29 +5,34 @@ import android.app.AlertDialog
 import android.content.*
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
+import android.text.method.LinkMovementMethod
 import android.view.View
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
+import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import de.beowulf.libretranslater.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONArray
 import org.json.JSONObject
-import java.io.*
+import java.io.BufferedReader
+import java.io.DataInputStream
+import java.io.InputStreamReader
+import java.io.OutputStream
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
-import android.os.Looper
-import android.text.method.LinkMovementMethod
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import android.view.WindowManager
-import android.widget.CheckBox
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -46,10 +51,19 @@ class MainActivity : AppCompatActivity() {
         if (settings.getBoolean("shrink", false))
             window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
 
-        sourceLangId = settings.getInt("Source", 2)
-        setSourceLang()
-        targetLangId = settings.getInt("Target", 4)
-        setTargetLang()
+        //Retrieve languages into shared preferences
+        retrieveLanguages()
+
+        val languages: String = settings.getString("languages", "").toString()
+
+        if (languages != "") {
+            val availableLangCodes: List<String> = languages.split(",")
+
+            sourceLangId = settings.getInt("Source", 0)
+            setSourceLang()
+            targetLangId = settings.getInt("Target", availableLangCodes.lastIndex)
+            setTargetLang()
+        }
 
         if (intent.action == Intent.ACTION_SEND) {
             binding.SourceText.setText(intent.extras!!.getString(Intent.EXTRA_TEXT))
@@ -200,6 +214,9 @@ class MainActivity : AppCompatActivity() {
                         .putString("apiKey", apiET.text.toString())
                         .apply()
 
+                    //Retrieve languages into shared preferences
+                    retrieveLanguages()
+
                     if (shrink != shrinkCB.isChecked) {
                         settings.edit()
                             .putBoolean("shrink", shrinkCB.isChecked)
@@ -214,18 +231,75 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun retrieveLanguages() {
+        val server: String? = settings.getString("server", "libretranslate.de")
+        val url = URL("https://$server/languages")
+        val connection: HttpsURLConnection = url.openConnection() as HttpsURLConnection
+        connection.requestMethod = "GET"
+        connection.setRequestProperty("accept", "application/json")
+        CoroutineScope(Dispatchers.IO).launch {
+            var serverError = ""
+            val languages: String? = try {
+                val inputStream = DataInputStream(connection.inputStream)
+                val reader = BufferedReader(InputStreamReader(inputStream))
+                val jsonArray = JSONArray(reader.readLine())
+                val languagesSB = StringBuilder()
+                for (i in 0 until jsonArray.length()) {
+                    languagesSB.append(jsonArray.getJSONObject(i).getString("code")).append(",")
+                }
+                if(languagesSB.isNotEmpty())
+                    languagesSB.setLength(languagesSB.length-1);
+                    languagesSB.toString()
+            } catch (e: Exception) {
+                serverError = try {
+                    JSONObject(connection.errorStream.reader().readText()).getString("error")
+                } catch (e: Exception) {
+                    getString(R.string.netError)
+                }
+                null
+            }
+            withContext(Dispatchers.Main) {
+                if (languages == null) {
+                    Toast.makeText(this@MainActivity, serverError, Toast.LENGTH_SHORT).show()
+                    settings.edit()
+                        .putString("languages", "")
+                        .apply()
+                } else {
+                    val availableLangCodes: List<String> = languages.toString().split(",")
+
+                    //Setting languages needs to happen before setSourceLang and setTargetLang
+                    settings.edit()
+                        .putString("languages", languages)
+                        .apply()
+
+                    //If selected language is not found in newly retrieved languages, replace with default value in UI
+                    if (binding.SourceLanguageTop.text == "" || ! availableLangCodes.contains(resources.getStringArray(R.array.LangCodes)[resources.getStringArray(R.array.Lang).indexOf(binding.SourceLanguageTop.text)])) {
+                        sourceLangId = 0
+                        setSourceLang()
+                    }
+                    if (binding.TargetLanguageTop.text == "" || ! availableLangCodes.contains(resources.getStringArray(R.array.LangCodes)[resources.getStringArray(R.array.Lang).indexOf(binding.TargetLanguageTop.text)])) {
+                        targetLangId = availableLangCodes.lastIndex
+                        setTargetLang()
+                    }
+                }
+            }
+        }
+    }
+
     private fun translateText() {
-        if (binding.SourceText.text.toString() != "") {
+        val languages: String = settings.getString("languages", "").toString()
+        if (binding.SourceText.text.toString() != "" && languages != "") {
             val server: String? = settings.getString("server", "libretranslate.de")
             val apiKey: String? = settings.getString("apiKey", "")
             val url = URL("https://$server/translate")
+            val availableLangCodes: List<String> = languages.split(",")
             val connection: HttpsURLConnection = url.openConnection() as HttpsURLConnection
             connection.requestMethod = "POST"
             connection.setRequestProperty("accept", "application/json")
             val data =
                 "q=${binding.SourceText.text.replace(Regex("&"), "%26")}" +
-                        "&source=${resources.getStringArray(R.array.LangCodes)[sourceLangId]}" +
-                        "&target=${resources.getStringArray(R.array.LangCodes)[targetLangId]}" +
+                        "&source=${availableLangCodes[sourceLangId]}" +
+                        "&target=${availableLangCodes[targetLangId]}" +
                         if (apiKey != "") {
                             "&api_key=$apiKey"
                         } else {
@@ -263,29 +337,70 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setSourceLang() {
-        val sourceLang = resources.getStringArray(R.array.Lang)[sourceLangId]
-        binding.SourceLanguageTop.text = sourceLang
-        binding.SourceLanguageBot.text = sourceLang
-        settings.edit()
-            .putInt("Source", sourceLangId)
-            .apply()
+        val languages: String = settings.getString("languages", "").toString()
+        if (languages != "") {
+            val availableLangCodes: List<String> = languages.split(",")
+            val sourceLang: String =
+                resources.getStringArray(R.array.Lang)[resources.getStringArray(R.array.LangCodes)
+                    .indexOf(
+                        availableLangCodes[sourceLangId]
+                    )]
+            binding.SourceLanguageTop.text = sourceLang
+            binding.SourceLanguageBot.text = sourceLang
+            settings.edit()
+                .putInt("Source", sourceLangId)
+                .apply()
+        }
     }
 
     private fun setTargetLang() {
-        val targetLang = resources.getStringArray(R.array.Lang)[targetLangId]
-        binding.TargetLanguageTop.text = targetLang
-        binding.TargetLanguageBot.text = targetLang
-        settings.edit()
-            .putInt("Target", targetLangId)
-            .apply()
+        val languages: String = settings.getString("languages", "").toString()
+        if (languages != "") {
+            val availableLangCodes: List<String> = languages.split(",")
+            val targetLang: String =
+                resources.getStringArray(R.array.Lang)[resources.getStringArray(R.array.LangCodes)
+                    .indexOf(
+                        availableLangCodes[targetLangId]
+                    )]
+            binding.TargetLanguageTop.text = targetLang
+            binding.TargetLanguageBot.text = targetLang
+            settings.edit()
+                .putInt("Target", targetLangId)
+                .apply()
+        }
     }
 
     private fun chooseLang(source: Boolean) {
+        val languages: String = settings.getString("languages", "").toString()
+        val availableLangs: MutableList<String> = mutableListOf()
+
+        //Check if available languages exist in strings.xml. If so, place in availableLangs list
+        if (languages != "") {
+            val availableLangCodes: List<String> = languages.split(",")
+
+            for (i in availableLangCodes.indices) {
+                if (resources.getStringArray(R.array.LangCodes).contains(availableLangCodes[i])) {
+                    availableLangs.add(
+                        resources.getStringArray(R.array.Lang)[resources.getStringArray(R.array.LangCodes)
+                            .indexOf(availableLangCodes[i])]
+                    )
+                } else {
+                    val langErrorSB = StringBuilder()
+                    langErrorSB.append("\"")
+                        .append(availableLangCodes[i])
+                        .append("\" ")
+                        .append(getString(R.string.langError))
+
+                    Toast.makeText(this@MainActivity, langErrorSB.toString(), Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
         AlertDialog.Builder(
             this, R.style.AlertDialog
         )
             .setTitle(getString(R.string.chooseLang))
-            .setItems(resources.getStringArray(R.array.Lang)) { _, id ->
+            .setItems(availableLangs.toTypedArray()) { _, id ->
                 if (source) {
                     sourceLangId = id
                     setSourceLang()

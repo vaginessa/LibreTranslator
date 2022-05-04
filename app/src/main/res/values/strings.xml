@@ -20,6 +20,7 @@
     <string name="save">Save</string>
     <string name="abort">Abort</string>
     <string name="netError">Connection to server failed - check your internet connection</string>
+    <string name="langError">is not a valid language - please report this if this is an actual language code</string>
 
     <string name="addCustomServer">Enter custom server URL</string>
     <string name="addApiKey">Add API key (if necessary)</string>
@@ -47,6 +48,20 @@
         <item>Spanish</item>
         <item>Turkish</item>
         <item>Vietnamese</item>
+        <item>Azerbaijani</item>
+        <item>Czech</item>
+        <item>Dutch</item>
+        <item>Esperanto</item>
+        <item>Finnish</item>
+        <item>Greek</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Persian</item>
+        <item>Slovak</item>
+        <item>Swedish</item>
+        <item>Ukranian</item>
+        <item>Danish</item>
+        <item>Norwegian</item>
     </string-array>
 
     <string-array name="LangCodes">
@@ -67,5 +82,19 @@
         <item>es</item>
         <item>tr</item>
         <item>vi</item>
+        <item>az</item>
+        <item>cs</item>
+        <item>nl</item>
+        <item>eo</item>
+        <item>fi</item>
+        <item>el</item>
+        <item>hu</item>
+        <item>id</item>
+        <item>fa</item>
+        <item>sk</item>
+        <item>sv</item>
+        <item>uk</item>
+        <item>da</item>
+        <item>no</item>
     </string-array>
 </resources>

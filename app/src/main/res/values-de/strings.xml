@@ -18,6 +18,7 @@
     <string name="save">Speichern</string>
     <string name="abort">Abbrechen</string>
     <string name="netError">Verbindung zum Server fehlgeschlagen - überprüfe deine Verbindung</string>
+    <string name="langError">is not a valid language - please report this if this is an actual language code</string>
 
     <string name="addCustomServer">Benutzerdefinierte Server-URL eingeben</string>
     <string name="addApiKey">API-Key hinzufügen (falls nötig)</string>
@@ -45,14 +46,28 @@
         <item>Spanisch</item>
         <item>Türkisch</item>
         <item>Vietnamesisch</item>
+        <item>Azerbaijani</item>
+        <item>Czech</item>
+        <item>Dutch</item>
+        <item>Esperanto</item>
+        <item>Finnish</item>
+        <item>Greek</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Persian</item>
+        <item>Slovak</item>
+        <item>Swedish</item>
+        <item>Ukranian</item>
+        <item>Danish</item>
+        <item>Norwegian</item>
     </string-array>
 
     <string-array name="LangCodes">
         <item>ar</item>
         <item>zh</item>
-        <item>de</item>
         <item>en</item>
         <item>fr</item>
+        <item>de</item>
         <item>hi</item>
         <item>id</item>
         <item>ga</item>
@@ -65,5 +80,19 @@
         <item>es</item>
         <item>tr</item>
         <item>vi</item>
+        <item>az</item>
+        <item>cs</item>
+        <item>nl</item>
+        <item>eo</item>
+        <item>fi</item>
+        <item>el</item>
+        <item>hu</item>
+        <item>id</item>
+        <item>fa</item>
+        <item>sk</item>
+        <item>sv</item>
+        <item>uk</item>
+        <item>da</item>
+        <item>no</item>
     </string-array>
 </resources>

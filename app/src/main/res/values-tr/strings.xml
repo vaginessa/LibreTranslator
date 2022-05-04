@@ -18,6 +18,7 @@
     <string name="save">Kaydet</string>
     <string name="abort">İptal</string>
     <string name="netError">Sunucuya bağlantı başarısız oldu - internet bağlantınızı gözden geçirin</string>
+    <string name="langError">is not a valid language - please report this if this is an actual language code</string>
 
     <string name="addCustomServer">Özel sunucu URL\'si gir</string>
     <string name="addApiKey">API anahtarı ekle (gerekliyse)</string>
@@ -45,25 +46,53 @@
         <item>Rusça</item>
         <item>Türkçe</item>
         <item>Vietnamca</item>
+        <item>Azerbaijani</item>
+        <item>Czech</item>
+        <item>Dutch</item>
+        <item>Esperanto</item>
+        <item>Finnish</item>
+        <item>Greek</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Persian</item>
+        <item>Slovak</item>
+        <item>Swedish</item>
+        <item>Ukranian</item>
+        <item>Danish</item>
+        <item>Norwegian</item>
     </string-array>
 
     <string-array name="LangCodes">
-        <item>de</item>
         <item>ar</item>
         <item>zh</item>
-        <item>id</item>
-        <item>fr</item>
-        <item>hi</item>
         <item>en</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>hi</item>
+        <item>id</item>
         <item>ga</item>
-        <item>es</item>
         <item>it</item>
         <item>ja</item>
         <item>ko</item>
         <item>pl</item>
         <item>pt</item>
         <item>ru</item>
+        <item>es</item>
         <item>tr</item>
         <item>vi</item>
+        <item>az</item>
+        <item>cs</item>
+        <item>nl</item>
+        <item>eo</item>
+        <item>fi</item>
+        <item>el</item>
+        <item>hu</item>
+        <item>id</item>
+        <item>fa</item>
+        <item>sk</item>
+        <item>sv</item>
+        <item>uk</item>
+        <item>da</item>
+        <item>no</item>
     </string-array>
 </resources>
