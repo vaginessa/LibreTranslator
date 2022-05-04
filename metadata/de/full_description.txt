@@ -8,35 +8,24 @@ Funktionen:
 Unterstützte Sprachen (UI):
 - Englisch
 - Deutsch
+- Französisch
+- Polnisch
+- Portugiesisch (Brasilien)
+- Russisch
+- Türkisch
 
 Unterstützte Sprachen (Übersetzung):
-- Arabisch
-- Chinesisch
-- Englisch
-- Französisch
-- Deutsch
-- Hindi
-- Indonesisch
-- Irisch
-- Italienisch
-- Japanisch
-- Koreanisch
-- Polnisch
-- Portugiesisch
-- Russisch
-- Spanisch
-- Türkisch
-- Vietnamesisch
+Dies hängt von der LibreTranslate-Instanz ab.
 
 Übersetzung:
 Die <a href="https://libretranslate.de/">LibreTranslate</a>-API wird für die Übersetzung benutzt. LibreTranslate ist lizenziert unter der <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>.
 
 Wiki:
-Im <a href="https://gitlab.com/BeowuIf/libretranslator/-/wikis/home">Wiki</a> kannst du eine kurze UI-Erklärung zum einfachen Start finden.
+Im <a href="https://codeberg.org/Beowulf/LibreTranslator/wiki">Wiki</a> kannst du eine kurze UI-Erklärung zum einfachen Start finden.
 
 Lizenzierung:
-Lizenziert unter der <a href="https://gitlab.com/BeowuIf/libretranslator/-/blob/master/LICENSE">EUPL-1.2</a>.
+Lizenziert unter der <a href="https://codeberg.org/Beowulf/LibreTranslator/src/branch/main/LICENSE">EUPL-1.2</a>.
 
 OpenSource:
-Diese Anwendung ist <a href="https://gitlab.com/BeowuIf/libretranslator">OpenSource</a>.
+Diese Anwendung ist <a href="https://codeberg.org/Beowulf/LibreTranslator">OpenSource</a>.
  

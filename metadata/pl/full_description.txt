@@ -6,36 +6,25 @@ Cechy:
 - więcej wkrótce...
 
 Obsługiwane języki (UI):
-- angielski
+- Angielski
 - niemiecki
-
-Obsługiwane języki (tłumaczenie):
-- angielski
-- arabski
-- chiński
 - francuski
-- hindi
-- hiszpański
-- indonezyjski
-- irlandzki
-- japoński
-- koreański
-- niemiecki
 - polski
-- portugalski
+- portugalski (Brazylia)
 - rosyjski
 - turecki
-- wietnamski
-- włoski
+
+Obsługiwane języki (tłumaczenie):
+Zależy to od instancji LibreTranslate.
 
 Tłumaczenie:
 Do tłumaczenia jest używany interfejs API <a href="https://libretranslate.de/">LibreTranslate</a>. LibreTranslate jest objęty licencją <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>.
 
 Wiki:
-W <a href="https://gitlab.com/BeowuIf/libretranslator/-/wikis/home">Wiki</a> możesz znaleźć krótkie wyjaśnienie dotyczące interfejsu użytkownika, które pomoże rozpocząć korzystanie z aplikacji.
+W <a href="https://codeberg.org/Beowulf/LibreTranslator/wiki">Wiki</a> możesz znaleźć krótkie wyjaśnienie dotyczące interfejsu użytkownika, które pomoże rozpocząć korzystanie z aplikacji.
 
 Licencjonowanie:
-Na licencji <a href="https://gitlab.com/BeowuIf/libretranslator/-/blob/master/LICENSE">EUPL-1.2</a>.
+Na licencji <a href="https://codeberg.org/Beowulf/LibreTranslator/src/branch/main/LICENSE">EUPL-1.2</a>.
 
 Otwarte źródło:
-Ta aplikacja jest <a href="https://gitlab.com/BeowuIf/libretranslator">otwartoźródłowa</a>.
+Ta aplikacja jest <a href="https://codeberg.org/Beowulf/LibreTranslator">otwartoźródłowa</a>.

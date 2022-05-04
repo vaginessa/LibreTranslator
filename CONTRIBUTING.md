@@ -2,9 +2,7 @@
 
 ## Reporting issues
 
-If you find an issue in the app, you can use our [Issue
-Tracker](https://gitlab.com/BeowuIf/libretranslator/-/issues). Make sure that it
-hasn't yet been reported by searching first.
+If you find an issue in the app, you can use our [IssueTracker](https://codeberg.org/Beowulf/LibreTranslator/issues). Make sure that it hasn't yet been reported by searching first.
 
 Remember to include the following information:
 

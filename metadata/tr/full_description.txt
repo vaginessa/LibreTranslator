@@ -8,34 +8,23 @@
 Desteklenen diller (kullanıcı arayüzü):
 - İngilizce
 - Almanca
-
-Desteklenen diller (çeviri):
-- Almanca
-- Arapça
-- Çince
-- Endonezyaca
 - Fransızca
-- Hintçe
-- İngilizce
-- İrlandaca
-- İspanyolca
-- İtalyanca
-- Japonca
-- Korece
 - Lehçe
-- Portekizce
+- Portekiz Brezilyası)
 - Rusça
 - Türkçe
-- Vietnamca
+
+Desteklenen diller (çeviri):
+Bu, LibreTranslate örneğine bağlıdır.
 
 Çeviri:
 Çeviri için <a href="https://libretranslate.de/">LibreTranslate</a> API kullanılmaktadır. LibreTranslate, <a href="https://www.gnu.org/licenses/agpl-3.0.tr.html">AGPLv3</a> altında lisanslanmıştır.
 
 Wiki:
-<a href="https://gitlab.com/BeowuIf/libretranslator/-/wikis/home">Wiki</a> sayfasında, başlangıç için kısa bir kullanıcı arayüzü açıklaması bulabilirsiniz.
+<a href="https://codeberg.org/Beowulf/LibreTranslator/wiki">Wiki</a> sayfasında, başlangıç için kısa bir kullanıcı arayüzü açıklaması bulabilirsiniz.
 
 Lisans:
-<a href="https://gitlab.com/BeowuIf/libretranslator/-/blob/master/LICENSE">EUPL-1.2</a> altında lisanslanmıştır.
+<a href="https://codeberg.org/Beowulf/LibreTranslator/src/branch/main/LICENSE">EUPL-1.2</a> altında lisanslanmıştır.
 
 Açık Kaynak:
-Uygulama <a href="https://gitlab.com/BeowuIf/libretranslator">açık kaynaklıdır</a>.
+Uygulama <a href="https://codeberg.org/Beowulf/LibreTranslator">açık kaynaklıdır</a>.

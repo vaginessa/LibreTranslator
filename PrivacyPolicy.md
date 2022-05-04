@@ -14,12 +14,15 @@ Use of LibreTranslator may result in one or more of the following third party or
   You can choose the LibreTranslate instance according to your preference.
 
 In addition, in case you take part in the development of the app:
-- [GitLab](https://about.gitlab.com/privacy/), whose platform we use to facilitate development of the app
+- [Codeberg](https://codeberg.org/codeberg/org/src/branch/main/PrivacyPolicy.md), whose platform we use to facilitate development of the app
+- [GitLab](https://about.gitlab.com/privacy/), whose platform we have used to facilitate development of the app
+
+In addition, in case you take part in the translation of the app:
+- [POEditor](https://poeditor.com/terms/privacy), whose platform we use to facilitate translation of the app
 
 ## Policy Updates
 This privacy policy may get modified from time to time.  
-THis policy is effective as of 2021-11-22.
+This policy is effective as of 2022-05-04.
 
 ## Contact
-Questions and suggestions about the LibreTranslator app can be sent to us via [email](mailto:contact-project+beowuif-libretranslator-28803428-issue-@incoming.gitlab.com) or directly through the [ticket system](https://gitlab.com/BeowuIf/libretranslator/-/issues).  
-When you send an email, a confidential ticket is created in the GitLab repository and your email address is stored.
+Questions and suggestions about the LibreTranslator app can be sent to us via [email](mailto:libretranslator@beocode.eu) or directly through the [ticket system](https://codeberg.org/Beowulf/LibreTranslator/issues).
