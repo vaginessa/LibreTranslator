@@ -18,7 +18,7 @@
     <string name="save">Sauvegarder</string>
     <string name="abort">Interrompre</string>
     <string name="netError">Connection to server failed - check your internet connection</string>
-    <string name="langError">is not a valid language - please report this if this is an actual language code</string>
+    <string name="langError">\"%s\" is not a valid language - please report this if this is an actual language code</string>
 
     <string name="addCustomServer">Entrer une URL de serveur personnalisée</string>
     <string name="addApiKey">Ajouter une clé API (si nécessaire)</string>
@@ -41,6 +41,7 @@
         <item>Finlandais</item>
         <item>Français</item>
         <item>Grec</item>
+        <item>Hébreu</item>
         <item>Hindi</item>
         <item>Hongroise</item>
         <item>Indonésien</item>
@@ -74,6 +75,7 @@
         <item>fi</item>
         <item>fr</item>
         <item>el</item>
+        <item>he</item>
         <item>hi</item>
         <item>hu</item>
         <item>id</item>

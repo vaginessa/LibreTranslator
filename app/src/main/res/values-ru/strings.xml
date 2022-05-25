@@ -18,7 +18,7 @@
     <string name="save">Сохранить</string>
     <string name="abort">Прервать</string>
     <string name="netError">Connection to server failed - check your internet connection</string>
-    <string name="langError">is not a valid language - please report this if this is an actual language code</string>
+    <string name="langError">\"%s\" is not a valid language - please report this if this is an actual language code</string>
 
     <string name="addCustomServer">Введите URL адресс сервера</string>
     <string name="addApiKey">Добавить API ключ (если нужно)</string>>
@@ -37,6 +37,7 @@
         <item>Голландский</item>
         <item>Греция</item>
         <item>Датский</item>
+        <item>Иврит</item>
         <item>Индонезийский</item>
         <item>Ирландский</item>
         <item>Испанский</item>
@@ -70,6 +71,7 @@
         <item>nl</item>
         <item>rl</item>
         <item>da</item>
+        <item>he</item>
         <item>id</item>
         <item>ga</item>
         <item>es</item>

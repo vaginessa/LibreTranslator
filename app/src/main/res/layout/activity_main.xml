@@ -185,32 +185,36 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeTextType="uniform"
             android:background="@drawable/left_round"
             android:contentDescription="@string/chooseSLanguage"
             android:gravity="center"
+            android:maxLines="1"
             android:paddingStart="15dp"
             android:paddingLeft="15dp"
             android:paddingEnd="25dp"
             android:paddingRight="25dp"
             android:textAlignment="center"
-            android:textColor="?colorPrimary"
-            android:textSize="22sp" />
+            android:textColor="?colorPrimary" />
 
         <TextView
             android:id="@+id/TargetLanguageBot"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeTextType="uniform"
             android:background="@drawable/right_round"
             android:contentDescription="@string/chooseTLanguage"
             android:gravity="center"
-            android:paddingStart="15dp"
+            android:maxLines="1"
+            android:paddingStart="25dp"
             android:paddingLeft="15dp"
-            android:paddingEnd="25dp"
+            android:paddingEnd="15dp"
             android:paddingRight="25dp"
             android:textAlignment="center"
-            android:textColor="?colorPrimary"
-            android:textSize="22sp" />
+            android:textColor="?colorPrimary" />
     </LinearLayout>
 
     <ImageButton

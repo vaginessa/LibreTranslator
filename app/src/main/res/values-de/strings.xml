@@ -18,7 +18,7 @@
     <string name="save">Speichern</string>
     <string name="abort">Abbrechen</string>
     <string name="netError">Verbindung zum Server fehlgeschlagen - überprüfe deine Verbindung</string>
-    <string name="langError">is not a valid language - please report this if this is an actual language code</string>
+    <string name="langError">\"%s\" ist keine gültige Sprache - bitte melde das, wenn es ein gültiger Sprach-Code ist</string>
 
     <string name="addCustomServer">Benutzerdefinierte Server-URL eingeben</string>
     <string name="addApiKey">API-Key hinzufügen (falls nötig)</string>
@@ -39,6 +39,7 @@
         <item>Finnisch</item>
         <item>Französisch</item>
         <item>Griechisch</item>
+        <item>Hebräisch</item>
         <item>Hindi</item>
         <item>Indonesisch</item>
         <item>Irisch</item>
@@ -72,6 +73,7 @@
         <item>fi</item>
         <item>fr</item>
         <item>el</item>
+        <item>he</item>
         <item>hi</item>
         <item>id</item>
         <item>ga</item>

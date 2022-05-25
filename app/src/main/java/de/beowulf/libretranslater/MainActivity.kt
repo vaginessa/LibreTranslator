@@ -33,7 +33,6 @@ import java.io.OutputStream
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -245,15 +244,23 @@ class MainActivity : AppCompatActivity() {
                 val jsonArray = JSONArray(reader.readLine())
                 val languagesSB = StringBuilder()
                 for (i in 0 until jsonArray.length()) {
-                    languagesSB.append(jsonArray.getJSONObject(i).getString("code")).append(",")
+                    val langCode = jsonArray.getJSONObject(i).getString("code")
+                    if (resources.getStringArray(R.array.LangCodes).contains(langCode))
+                        languagesSB.append(langCode).append(",")
+                    else
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(this@MainActivity, getString(R.string.langError, langCode), Toast.LENGTH_SHORT).show()
+                        }
                 }
                 if(languagesSB.isNotEmpty())
-                    languagesSB.setLength(languagesSB.length-1);
-                    languagesSB.toString()
+                    languagesSB.setLength(languagesSB.length-1)
+                languagesSB.toString()
             } catch (e: Exception) {
+                e.printStackTrace()
                 serverError = try {
                     JSONObject(connection.errorStream.reader().readText()).getString("error")
                 } catch (e: Exception) {
+                    e.printStackTrace()
                     getString(R.string.netError)
                 }
                 null
@@ -379,20 +386,10 @@ class MainActivity : AppCompatActivity() {
             val availableLangCodes: List<String> = languages.split(",")
 
             for (i in availableLangCodes.indices) {
-                if (resources.getStringArray(R.array.LangCodes).contains(availableLangCodes[i])) {
-                    availableLangs.add(
-                        resources.getStringArray(R.array.Lang)[resources.getStringArray(R.array.LangCodes)
-                            .indexOf(availableLangCodes[i])]
-                    )
-                } else {
-                    val langErrorSB = StringBuilder()
-                    langErrorSB.append("\"")
-                        .append(availableLangCodes[i])
-                        .append("\" ")
-                        .append(getString(R.string.langError))
-
-                    Toast.makeText(this@MainActivity, langErrorSB.toString(), Toast.LENGTH_SHORT).show()
-                }
+                availableLangs.add(
+                    resources.getStringArray(R.array.Lang)[resources.getStringArray(R.array.LangCodes)
+                        .indexOf(availableLangCodes[i])]
+                )
             }
         }
 
