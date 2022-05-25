@@ -24,8 +24,8 @@
     <string name="addApiKey">Dodaj klucz API (jeśli potrzebny)</string>
     <string name="shrink_view">Dopasuj widok nad klawiaturą</string>
     <string name="base">Oparte na <a href="https://libretranslate.de/">LibreTranslate-API</a>, na licencji <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
-    <string name="reportError">Znalazłeś(-aś) błąd? Dziwne zachowanie?\nZgłoś to na <a href="https://codeberg.org/Beowulf/LibreTranslator/issues">Codebergie</a> lub przez <a href="mailto:libretranslator@beocode.eu">email</a></string>
-    <string name="created_by">Aplikacja stworzona przez <a href="https://codeberg.org/Beowulf/LibreTranslator">Beowulf</a> na licencji <a href="https://codeberg.org/Beowulf/LibreTranslator/src/branch/main/LICENSE">EUPL-1.2</a></string>
+    <string name="reportError">Znalazłeś(-aś) błąd? Dziwne zachowanie?\nZgłoś to na <a href="https://codeberg.org/BeoCode/LibreTranslator/issues">Codebergie</a> lub przez <a href="mailto:libretranslator@beocode.eu">email</a></string>
+    <string name="created_by">Aplikacja stworzona przez <a href="https://codeberg.org/BeoCode/LibreTranslator">BeoCode</a> na licencji <a href="https://codeberg.org/BeoCode/LibreTranslator/src/branch/main/LICENSE">EUPL-1.2</a></string>
     <string name="close">Zamknij</string>
 
     <string-array name="Lang">

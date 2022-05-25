@@ -25,4 +25,4 @@ This privacy policy may get modified from time to time.
 This policy is effective as of 2022-05-04.
 
 ## Contact
-Questions and suggestions about the LibreTranslator app can be sent to us via [email](mailto:libretranslator@beocode.eu) or directly through the [ticket system](https://codeberg.org/Beowulf/LibreTranslator/issues).
+Questions and suggestions about the LibreTranslator app can be sent to us via [email](mailto:libretranslator@beocode.eu) or directly through the [ticket system](https://codeberg.org/BeoCode/LibreTranslator/issues).
