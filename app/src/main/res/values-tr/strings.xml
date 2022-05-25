@@ -31,68 +31,66 @@
     <string-array name="Lang">
         <item>Almanca</item>
         <item>Arapça</item>
+        <item>Azerice</item>
+        <item>Çekçe</item>
         <item>Çince</item>
+        <item>Danimarka</item>
         <item>Endonezyaca</item>
+        <item>Esperanto</item>
+        <item>Farsça</item>
+        <item>Fince</item>
         <item>Fransızca</item>
         <item>Hintçe</item>
+        <item>Hollandaca</item>
         <item>İngilizce</item>
         <item>İrlandaca</item>
         <item>İspanyolca</item>
+        <item>İsveç</item>
         <item>İtalyanca</item>
         <item>Japonca</item>
         <item>Korece</item>
         <item>Lehçe</item>
+        <item>Macarca</item>
+        <item>Norveççe</item>
         <item>Portekizce</item>
         <item>Rusça</item>
+        <item>Slovakça</item>
         <item>Türkçe</item>
+        <item>Ukraynaca</item>
         <item>Vietnamca</item>
-        <item>Azerbaijani</item>
-        <item>Czech</item>
-        <item>Dutch</item>
-        <item>Esperanto</item>
-        <item>Finnish</item>
-        <item>Greek</item>
-        <item>Hungarian</item>
-        <item>Indonesian</item>
-        <item>Persian</item>
-        <item>Slovak</item>
-        <item>Swedish</item>
-        <item>Ukranian</item>
-        <item>Danish</item>
-        <item>Norwegian</item>
+        <item>Yunan</item>
     </string-array>
 
     <string-array name="LangCodes">
-        <item>ar</item>
-        <item>zh</item>
-        <item>en</item>
-        <item>fr</item>
         <item>de</item>
-        <item>hi</item>
+        <item>ar</item>
+        <item>az</item>
+        <item>cs</item>
+        <item>zh</item>
+        <item>da</item>
         <item>id</item>
+        <item>eo</item>
+        <item>fa</item>
+        <item>fi</item>
+        <item>fr</item>
+        <item>hi</item>
+        <item>nl</item>
+        <item>en</item>
         <item>ga</item>
+        <item>es</item>
+        <item>sv</item>
         <item>it</item>
         <item>ja</item>
         <item>ko</item>
         <item>pl</item>
+        <item>hu</item>
+        <item>no</item>
         <item>pt</item>
         <item>ru</item>
-        <item>es</item>
-        <item>tr</item>
-        <item>vi</item>
-        <item>az</item>
-        <item>cs</item>
-        <item>nl</item>
-        <item>eo</item>
-        <item>fi</item>
-        <item>el</item>
-        <item>hu</item>
-        <item>id</item>
-        <item>fa</item>
         <item>sk</item>
-        <item>sv</item>
+        <item>tr</item>
         <item>uk</item>
-        <item>da</item>
-        <item>no</item>
+        <item>vi</item>
+        <item>el</item>
     </string-array>
 </resources>

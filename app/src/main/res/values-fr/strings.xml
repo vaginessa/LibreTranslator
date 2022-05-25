@@ -32,67 +32,65 @@
         <item>Allemand</item>
         <item>Anglais</item>
         <item>Arabe</item>
+        <item>Azerbaïdjanais</item>
         <item>Chinois</item>
         <item>Coréen</item>
+        <item>Danois</item>
         <item>Espagnol</item>
+        <item>Espéranto</item>
+        <item>Finlandais</item>
         <item>Français</item>
+        <item>Grec</item>
         <item>Hindi</item>
+        <item>Hongroise</item>
         <item>Indonésien</item>
         <item>Irlandais</item>
         <item>Italien</item>
         <item>Japonais</item>
+        <item>Néerlandais</item>
+        <item>Norvégien</item>
+        <item>Persan</item>
         <item>Polonais</item>
         <item>Portugais</item>
         <item>Russe</item>
+        <item>Slovaquie</item>
+        <item>Suédois</item>
+        <item>Tchèque</item>
         <item>Turc</item>
-        <item>Vietnamien</item>
-        <item>Azerbaijani</item>
-        <item>Czech</item>
-        <item>Dutch</item>
-        <item>Esperanto</item>
-        <item>Finnish</item>
-        <item>Greek</item>
-        <item>Hungarian</item>
-        <item>Indonesian</item>
-        <item>Persian</item>
-        <item>Slovak</item>
-        <item>Swedish</item>
         <item>Ukranian</item>
-        <item>Danish</item>
-        <item>Norwegian</item>
+        <item>Vietnamien</item>
     </string-array>
 
     <string-array name="LangCodes">
-        <item>ar</item>
-        <item>zh</item>
-        <item>en</item>
-        <item>fr</item>
         <item>de</item>
+        <item>en</item>
+        <item>ar</item>
+        <item>az</item>
+        <item>zh</item>
+        <item>ko</item>
+        <item>da</item>
+        <item>ex</item>
+        <item>eo</item>
+        <item>fi</item>
+        <item>fr</item>
+        <item>el</item>
         <item>hi</item>
+        <item>hu</item>
         <item>id</item>
         <item>ga</item>
         <item>it</item>
         <item>ja</item>
-        <item>ko</item>
+        <item>nl</item>
+        <item>no</item>
+        <item>fa</item>
         <item>pl</item>
         <item>pt</item>
         <item>ru</item>
-        <item>es</item>
-        <item>tr</item>
-        <item>vi</item>
-        <item>az</item>
-        <item>cs</item>
-        <item>nl</item>
-        <item>eo</item>
-        <item>fi</item>
-        <item>el</item>
-        <item>hu</item>
-        <item>id</item>
-        <item>fa</item>
         <item>sk</item>
         <item>sv</item>
+        <item>cs</item>
+        <item>tr</item>
         <item>uk</item>
-        <item>da</item>
-        <item>no</item>
+        <item>vi</item>
     </string-array>
 </resources>

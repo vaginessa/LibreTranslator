@@ -29,9 +29,14 @@
     <string name="close">Отмена</string>
 
     <string-array name="Lang">
+        <item>Азербайджан</item>
         <item>Английский</item>
         <item>Арабский</item>
+        <item>Венгерский</item>
         <item>Вьетнамский</item>
+        <item>Голландский</item>
+        <item>Греция</item>
+        <item>Датский</item>
         <item>Индонезийский</item>
         <item>Ирландский</item>
         <item>Испанский</item>
@@ -39,60 +44,53 @@
         <item>Китайский</item>
         <item>Корейский</item>
         <item>Немецкий</item>
+        <item>Норвежский</item>
+        <item>Персидский</item>
         <item>Польский</item>
         <item>Португальский</item>
         <item>Русский</item>
+        <item>Словакия</item>
         <item>Турецкий</item>
+        <item>Укранский</item>
+        <item>Финский</item>
         <item>Французский</item>
         <item>Хинди</item>
+        <item>Чехия</item>
+        <item>Шведский</item>
+        <item>Эсперанто</item>
         <item>Японский</item>
-        <item>Azerbaijani</item>
-        <item>Czech</item>
-        <item>Dutch</item>
-        <item>Esperanto</item>
-        <item>Finnish</item>
-        <item>Greek</item>
-        <item>Hungarian</item>
-        <item>Indonesian</item>
-        <item>Persian</item>
-        <item>Slovak</item>
-        <item>Swedish</item>
-        <item>Ukranian</item>
-        <item>Danish</item>
-        <item>Norwegian</item>
     </string-array>
 
     <string-array name="LangCodes">
-        <item>ar</item>
-        <item>zh</item>
+        <item>az</item>
         <item>en</item>
-        <item>fr</item>
-        <item>de</item>
-        <item>hi</item>
+        <item>ar</item>
+        <item>hu</item>
+        <item>vi</item>
+        <item>nl</item>
+        <item>rl</item>
+        <item>da</item>
         <item>id</item>
         <item>ga</item>
+        <item>es</item>
         <item>it</item>
-        <item>ja</item>
+        <item>zh</item>
         <item>ko</item>
+        <item>de</item>
+        <item>no</item>
+        <item>fa</item>
         <item>pl</item>
         <item>pt</item>
         <item>ru</item>
-        <item>es</item>
-        <item>tr</item>
-        <item>vi</item>
-        <item>az</item>
-        <item>cs</item>
-        <item>nl</item>
-        <item>eo</item>
-        <item>fi</item>
-        <item>el</item>
-        <item>hu</item>
-        <item>id</item>
-        <item>fa</item>
         <item>sk</item>
-        <item>sv</item>
+        <item>tr</item>
         <item>uk</item>
-        <item>da</item>
-        <item>no</item>
+        <item>fi</item>
+        <item>fr</item>
+        <item>hi</item>
+        <item>cs</item>
+        <item>sv</item>
+        <item>eo</item>
+        <item>ja</item>
     </string-array>
 </resources>
