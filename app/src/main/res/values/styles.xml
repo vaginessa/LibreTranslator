@@ -11,6 +11,8 @@
         <item name="loopArrow">@drawable/loop_arrow_light</item>
 
         <item name="AlertBackground">@color/colorPrimaryLight</item>
+        <item name="android:windowBackground">@color/colorPrimaryLight</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimaryLight</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
@@ -25,6 +27,8 @@
         <item name="loopArrow">@drawable/loop_arrow_dark</item>
 
         <item name="AlertBackground">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>
     </style>
 
     <style name="LilaTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -38,6 +42,8 @@
         <item name="loopArrow">@drawable/loop_arrow_lila</item>
 
         <item name="AlertBackground">@color/colorPrimaryLila</item>
+        <item name="android:windowBackground">@color/colorPrimaryLila</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimaryLila</item>
     </style>
 
     <style name="SandTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -51,6 +57,8 @@
         <item name="loopArrow">@drawable/loop_arrow_sand</item>
 
         <item name="AlertBackground">@color/colorPrimarySand</item>
+        <item name="android:windowBackground">@color/colorPrimarySand</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimarySand</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
@@ -65,6 +73,8 @@
         <item name="loopArrow">@drawable/loop_arrow_blue</item>
 
         <item name="AlertBackground">@color/colorPrimaryBlue</item>
+        <item name="android:windowBackground">@color/colorPrimaryBlue</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimaryBlue</item>
     </style>
 
     <style name="AlertDialog" parent="Theme.AppCompat.Dialog.Alert">
