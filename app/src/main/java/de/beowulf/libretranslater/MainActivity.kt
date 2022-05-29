@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun afterTextChanged(editable: Editable) {
                 handler.removeCallbacks(workRunnable)
-                handler.postDelayed(workRunnable, 500 /*delay*/)
+                handler.postDelayed(workRunnable, 750 /*delay*/)
                 binding.translationPending.visibility = View.VISIBLE
             }
         })
