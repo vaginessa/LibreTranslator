@@ -1,0 +1,4 @@
+- Retrieve translation languages from server (thx to Kris Doodle for the contribution)
+- UI improvements
+- Translation timeout increased (#1)
+- Migration to Codeberg

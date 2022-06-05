@@ -1,7 +1,0 @@
-- App-Name geändert
-- Fix für Server, die eine API-Authentifizierung erfordern
-- Fehlermeldung, wenn keine Verbindung zum Server besteht
-- Fehlermeldung, wenn die Übersetzung fehlschlägt
-- Auswahl, ob die Ansicht über der Tastatur angezeigt werden soll oder nicht
-- Türkische Übersetzung hinzugefügt (thx Oğuz Ersen)
-- Russische Übersetzung hinzugefügt (thx Koplenov)
