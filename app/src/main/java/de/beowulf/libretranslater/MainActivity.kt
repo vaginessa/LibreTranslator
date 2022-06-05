@@ -268,9 +268,6 @@ class MainActivity : AppCompatActivity() {
             withContext(Dispatchers.Main) {
                 if (languages == null) {
                     Toast.makeText(this@MainActivity, serverError, Toast.LENGTH_SHORT).show()
-                    settings.edit()
-                        .putString("languages", "")
-                        .apply()
                 } else {
                     val availableLangCodes: List<String> = languages.toString().split(",")
 
@@ -347,6 +344,8 @@ class MainActivity : AppCompatActivity() {
         val languages: String = settings.getString("languages", "").toString()
         if (languages != "") {
             val availableLangCodes: List<String> = languages.split(",")
+            if (availableLangCodes.size <= sourceLangId)
+                sourceLangId = 0
             val sourceLang: String =
                 resources.getStringArray(R.array.Lang)[resources.getStringArray(R.array.LangCodes)
                     .indexOf(
@@ -364,6 +363,8 @@ class MainActivity : AppCompatActivity() {
         val languages: String = settings.getString("languages", "").toString()
         if (languages != "") {
             val availableLangCodes: List<String> = languages.split(",")
+            if (availableLangCodes.size <= targetLangId)
+                targetLangId = 0
             val targetLang: String =
                 resources.getStringArray(R.array.Lang)[resources.getStringArray(R.array.LangCodes)
                     .indexOf(

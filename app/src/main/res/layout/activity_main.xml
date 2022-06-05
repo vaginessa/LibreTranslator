@@ -210,8 +210,8 @@
             android:gravity="center"
             android:maxLines="1"
             android:paddingStart="25dp"
-            android:paddingLeft="15dp"
-            android:paddingEnd="15dp"
+            android:paddingLeft="25dp"
+            android:paddingEnd="25dp"
             android:paddingRight="25dp"
             android:textAlignment="center"
             android:textColor="?colorPrimary" />
@@ -225,7 +225,7 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/round_button"
         android:contentDescription="@string/switchLanguages"
-        android:elevation="3dp"
+        android:elevation="5dp"
         android:src="?attr/loopArrow"
         tools:targetApi="lollipop" />
 
