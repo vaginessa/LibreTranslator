@@ -10,19 +10,19 @@
     <string name="switchLanguages">Echanger les langues</string>
 
     <string name="rlyRemoveText">Voulez-vous supprimer le texte?</string>
-    <string name="neverAskAgain">Never ask again</string>
+    <string name="neverAskAgain">Ne plus jamais demander</string>
     <string name="remove">Supprimer</string>
     <string name="shareTranslation">Partagez votre traduction</string>
     <string name="copiedClipboard">Copié vers le presse-papier</string>
     <string name="chooseLang">Choisir une langue</string>
     <string name="save">Sauvegarder</string>
     <string name="abort">Interrompre</string>
-    <string name="netError">Connection to server failed - check your internet connection</string>
-    <string name="langError">\"%s\" is not a valid language - please report this if this is an actual language code</string>
+    <string name="netError">La connexion au serveur a échoué - vérifiez votre connexion Internet</string>
+    <string name="langError">\"%s\" n\'est pas une langue valide - veuillez le signaler s\'il s\'agit d\'un code de langue réel</string>
 
     <string name="addCustomServer">Entrer une URL de serveur personnalisée</string>
     <string name="addApiKey">Ajouter une clé API (si nécessaire)</string>
-    <string name="shrink_view">Shrink view above keyboard</string>
+    <string name="shrink_view">Vue d\'ensemble au-dessus du clavier</string>
     <string name="base">Basé sur <a href="https://libretranslate.de/">LibreTranslate-API</a>, sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
     <string name="reportError">Vous avez trouvé une erreur? Comportement étrange?\\nFaites en part sur <a href="https://codeberg.org/BeoCode/LibreTranslator/issues">Codeberg</a> ou par <a href="mailto:libretranslator@beocode.eu">e-mail</a></string>
     <string name="created_by">Créé par <a href="https://codeberg.org/BeoCode/LibreTranslator">BeoCode</a> sous licence <a href="https://codeberg.org/BeoCode/LibreTranslator/src/branch/main/LICENSE">EUPL-1.2</a></string>

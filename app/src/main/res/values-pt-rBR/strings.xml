@@ -10,19 +10,19 @@
     <string name="switchLanguages">trocar idiomas</string>
 
     <string name="rlyRemoveText">Deseja realmente remover o texto?</string>
-    <string name="neverAskAgain">Never ask again</string>
+    <string name="neverAskAgain">Nunca mais peça</string>
     <string name="remove">Remover</string>
     <string name="shareTranslation">Compartilhe sua tradução</string>
     <string name="copiedClipboard">Copiado para a área de transferência</string>
     <string name="chooseLang">Escolha o idioma</string>
     <string name="save">Salvar</string>
     <string name="abort">Abortar</string>
-    <string name="netError">Connection to server failed - check your internet connection</string>
-    <string name="langError">\"%s\" is not a valid language - please report this if this is an actual language code</string>
+    <string name="netError">Falha na conexão com o servidor - verifique sua conexão com a internet</string>
+    <string name="langError">\"%s\" não é um idioma válido - favor informar isto se este for um código de idioma real</string>
 
     <string name="addCustomServer">Insira URL customizada de servidor</string>
     <string name="addApiKey">Adicionar chave API (se necessário)</string>
-    <string name="shrink_view">Shrink view above keyboard</string>
+    <string name="shrink_view">Vista de ajuste acima do teclado</string>
     <string name="base">Baseado no <a href="https://libretranslate.de/">LibreTranslate-API</a>, licenciado sob a <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
     <string name="reportError">Encontrou uma falha? Comportamento estranho?\nSubmeta um feedback no <a href="https://codeberg.org/BeoCode/LibreTranslator/issues">Codeberg</a> ou via <a href="mailto:libretranslator@beocode.eu">email</a></string>
     <string name="created_by">Criado por <a href="https://codeberg.org/BeoCode/LibreTranslator">BeoCode</a> licenciado sob a <a href="https://codeberg.org/BeoCode/LibreTranslator/src/branch/main/LICENSE">EUPL-1.2</a></string>

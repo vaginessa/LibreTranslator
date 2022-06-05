@@ -18,7 +18,7 @@
     <string name="save">Zapisz</string>
     <string name="abort">Anuluj</string>
     <string name="netError">Połączenie z serwerem nie powiodło się — sprawdź połączenie internetowe</string>
-    <string name="langError">\"%s\" is not a valid language - please report this if this is an actual language code</string>
+    <string name="langError">\"%s\" nie jest prawidłowym językiem - zgłoś to, jeśli jest to rzeczywisty kod języka</string>
 
     <string name="addCustomServer">Wprowadź adres URL własnego serwera</string>
     <string name="addApiKey">Dodaj klucz API (jeśli potrzebny)</string>

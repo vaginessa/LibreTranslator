@@ -18,7 +18,7 @@
     <string name="save">Kaydet</string>
     <string name="abort">İptal</string>
     <string name="netError">Sunucuya bağlantı başarısız oldu - internet bağlantınızı gözden geçirin</string>
-    <string name="langError">\"%s\" is not a valid language - please report this if this is an actual language code</string>
+    <string name="langError">\"%s\" geçerli bir dil değil - bu gerçek bir dil koduysa lütfen bunu bildirin</string>
 
     <string name="addCustomServer">Özel sunucu URL\'si gir</string>
     <string name="addApiKey">API anahtarı ekle (gerekliyse)</string>

@@ -10,19 +10,19 @@
     <string name="switchLanguages">сменить язык</string>
 
     <string name="rlyRemoveText">Действительно удалить текст?</string>
-    <string name="neverAskAgain">Never ask again</string>
+    <string name="neverAskAgain">Никогда не спрашивайте больше</string>
     <string name="remove">Удалить</string>
     <string name="shareTranslation">Поделиться своим переводом</string>
     <string name="copiedClipboard">Скопировано в буфер обмена</string>
     <string name="chooseLang">Выбрать язык</string>
     <string name="save">Сохранить</string>
     <string name="abort">Прервать</string>
-    <string name="netError">Connection to server failed - check your internet connection</string>
-    <string name="langError">\"%s\" is not a valid language - please report this if this is an actual language code</string>
+    <string name="netError">Не удалось установить соединение с сервером - проверьте подключение к Интернету</string>
+    <string name="langError">\"%s\" не является действительным языком - пожалуйста, сообщите об этом, если это действительный код языка</string>
 
     <string name="addCustomServer">Введите URL адресс сервера</string>
     <string name="addApiKey">Добавить API ключ (если нужно)</string>>
-    <string name="shrink_view">Fit view above keyboard</string>
+    <string name="shrink_view">Вид над клавиатурой</string>
     <string name="base">Основано на <a href="https://libretranslate.de/">LibreTranslate-API</a>, лицензировано под <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></string>
     <string name="reportError">Нашли ошибку? Странное поведение?\nОтправьте сообщение на <a href="https://codeberg.org/BeoCode/LibreTranslator/issues">Codeberg</a> или по <a href="mailto:libretranslator@beocode.eu">электронной почте</a></string>
     <string name="created_by">Создан <a href="https://codeberg.org/BeoCode/LibreTranslator">BeoCode</a> по лицензии <a href="https://codeberg.org/BeoCode/LibreTranslator/src/branch/main/LICENSE">EUPL-1.2</a></string>
